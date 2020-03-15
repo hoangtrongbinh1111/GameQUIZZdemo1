@@ -20,7 +20,7 @@ namespace GameQUIZZdemo1
           public int point = 0;
           public int SurNum { get => surNum; set => surNum = value; }
 
-          public Play1(int surNum1=60,string nameClient="",int pointClient=0)
+          public Play1(int surNum1=10,string nameClient="",int pointClient=0)
           {
                InitializeComponent();         
                surNum = surNum1;
@@ -63,15 +63,25 @@ namespace GameQUIZZdemo1
 
           private void bNext_Click(object sender, EventArgs e)
           {
-               point += 10;
-               updateDB();
-               //insert dữ liệu
-               this.Hide();
-               Play2 play = new Play2(surNum,name,point);
-               play.ShowDialog();
-               this.Close();
+               if(surNum==0)
+               {
+                    MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                    AddHeart ah = new AddHeart(surNum, name, point);
+                    ah.ShowDialog();
+                    surNum += 3;
+                    labelSurvive.Text = surNum.ToString();
+               }
+               else
+               {
+                    point += 10;
+                    updateDB();
+                    //insert dữ liệu
+                    this.Hide();
+                    Play2 play = new Play2(surNum, name, point);
+                    play.ShowDialog();
+                    this.Close();
+               }              
           }
-
           
           private void button3_Click(object sender, EventArgs e)//nút restart
           {          
@@ -86,11 +96,45 @@ namespace GameQUIZZdemo1
                
           }
 
-          private void label3_Click(object sender, EventArgs e)
+          public void Congra()//các câu chúc mừng
           {
-
+               int random;
+               Random rd = new Random();
+               random = rd.Next(1, 10);
+               switch (random)
+               {
+                    case 1:
+                         label3.Text = "You are so good";
+                         break;
+                    case 2:
+                         label3.Text = "Good business";
+                         break;
+                    case 3:
+                         label3.Text = "All the best.";
+                         break;
+                    case 4:
+                         label3.Text = "Dream Big. Shine Bright.";
+                         break;
+                    case 5:
+                         label3.Text = "I believe in you";
+                         break;
+                    case 6:
+                         label3.Text = "Good job....";
+                         break;
+                    case 7:
+                         label3.Text = "prettyyyyyyyyy";
+                         break;
+                    case 8:
+                         label3.Text = "Come on go go....";
+                         break;
+                    case 9:
+                         label3.Text = "Much Funnnn ???";
+                         break;
+                    case 10:
+                         label3.Text = "Success and success..";
+                         break;
+               }
           }
-
           private void button2_Click(object sender, EventArgs e)//nút home 
           {
                this.Hide();
@@ -98,30 +142,65 @@ namespace GameQUIZZdemo1
                play.ShowDialog();
                this.Close();
           }
-
+ 
           private void button4_Click(object sender, EventArgs e)//nút chuyển qua câu tiếp theo
-          {
-               DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.OK);
-               if (dlr == DialogResult.OK)//đồng ý thì reset lại màn chơi
-               {                   
-                    surNum -=2;//số mạng sống trừ đi 2
-                    point += 10;
-                    updateDB();
-                    this.Hide();
-                    Play2 play = new Play2(surNum,name,point);
-                    play.ShowDialog();
-                    this.Close();                   
-               }
+          {               
+               DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.YesNo);
+               if (dlr == DialogResult.Yes)//đồng ý thì sẽ chuyển sang câu tiếp theo
+               { 
+                    if(surNum<=2)//nếu mạng mà nhỏ hơn or bằng 2 thì phải thêm mạng
+                    {
+                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                         AddHeart ah = new AddHeart(surNum, name, point);
+                         ah.ShowDialog();
+                         surNum += 3;
+                         labelSurvive.Text = surNum.ToString();
+                    }
+                    else
+                    {
+                         surNum -= 2;//số mạng sống trừ đi 2
+                         point += 10;
+                         updateDB();
+                         this.Hide();
+                         Play2 play = new Play2(surNum, name, point);
+                         play.ShowDialog();
+                         this.Close();
+                    }                               
+               }               
           }
-
+          int countInstruct = 0;//để ấn button 1 lần thôi
+          int countReturn = 0;//dùng để ấn lại câu hướng dẫn
           private void button1_Click_1(object sender, EventArgs e)//gợi ý
           {
-               DialogResult dlr = MessageBox.Show("WaterMelon <3", "Đáp án", MessageBoxButtons.OK);
-               if (dlr == DialogResult.OK)//đồng ý thì reset lại màn chơi
+               countInstruct++;
+               if (countInstruct == 1)
                {
-                    surNum -= 1;//số mạng sống trừ đi 1
+                    if (surNum == 0)
+                    {
+                         countReturn++;
+                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                         AddHeart ah = new AddHeart(surNum, name, point);
+                         ah.ShowDialog();
+                         surNum += 3;
+                         labelSurvive.Text = surNum.ToString();
+                    }
+                    else
+                    {
+                         surNum--;
+                         labelSurvive.Text = Convert.ToString(surNum);
+                         MessageBox.Show("WaterMelon <3", "Đáp án", MessageBoxButtons.OK);
+                    }
+               }
+               else if(countInstruct==2&&countReturn==1)
+               {
+                    MessageBox.Show("WaterMelon <3", "Đáp án", MessageBoxButtons.OK);
+                    surNum--;
                     labelSurvive.Text = Convert.ToString(surNum);
                }
+               else
+               {
+                    MessageBox.Show("WaterMelon <3", "Đáp án", MessageBoxButtons.OK);
+               }               
           }
 
           private void Play1_MouseClick(object sender, MouseEventArgs e)
@@ -131,28 +210,28 @@ namespace GameQUIZZdemo1
                timer1.Start();
           }
 
-          private void p1_Click(object sender, EventArgs e)
+          private void p1_Click(object sender, EventArgs e)//chọn sai
           {
                pWrong.Visible = true;
                pWrong.Location = new Point(50,287);
                timer1.Start();
           }
 
-          private void p3_Click(object sender, EventArgs e)
+          private void p3_Click(object sender, EventArgs e)//chọn sai
           {
                pWrong.Visible = true;
                pWrong.Location = new Point(160,456);
                timer1.Start();
           }
 
-          private void p4_Click(object sender, EventArgs e)
+          private void p4_Click(object sender, EventArgs e)//chọn sai
           {
                pWrong.Visible = true;
                pWrong.Location = new Point(400,440);
                timer1.Start();
           }
 
-          private void p2_Click(object sender, EventArgs e)
+          private void p2_Click(object sender, EventArgs e)//chọn đúng
           {
                pTrue1.Visible = true;
                pTrue1.Location = new Point(407, 222);
@@ -160,6 +239,7 @@ namespace GameQUIZZdemo1
                pTrue.Visible = true;
                pTrue.Location = new Point(0, 60);
                pTrue.Size = new Size(582,544);
+               Congra();
           }
 
           private void Play1_Load(object sender, EventArgs e)
@@ -253,6 +333,20 @@ namespace GameQUIZZdemo1
           private void textBox1_Click(object sender, EventArgs e)//click vào câu 1 thì sẽ ẩn đi
           {
                MenuQues.Visible = false;
+          }
+
+          private void btnAddHeart_Click(object sender, EventArgs e)//thêm mạng
+          {
+               if(surNum==0)//nếu hết mạng thì mới cho sự trợ giúp
+               {
+                    AddHeart ah = new AddHeart(surNum, name, point);
+                    ah.ShowDialog();              
+               }
+               else
+               {
+                    MessageBox.Show("Hết mạng mới được thêm mạng", "Thông báo", MessageBoxButtons.OK);
+               }
+               
           }
      }
 }

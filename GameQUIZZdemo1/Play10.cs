@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace GameQUIZZdemo1
 {
-     public partial class Play5 : Form
+     public partial class Play10 : Form
      {
-          public int surNum;//số mạng
+          public int surNum=10;//số mạng
           public string name = "";//tên ng chơi
           public int point = 0;
-          public Play5(int surNum1 = 60, string nameClient = "", int pointClient = 0)
+          public Play10(int surNum1 = 60, string nameClient = "", int pointClient = 0)
           {
                InitializeComponent();
                surNum = surNum1;
@@ -39,32 +39,140 @@ namespace GameQUIZZdemo1
                connect.Close();
           }
 
-          private void checkBox1_Click(object sender, EventArgs e)//check sao
+          private void bAns81_Click(object sender, EventArgs e)
           {
-               checkBox1.Checked = false;
+               surNum--;
+               labelSurvive.Text = surNum.ToString();
           }
 
-          private void checkBox2_Click(object sender, EventArgs e)//check sao
+          private void bAns69_Click(object sender, EventArgs e)
           {
-               checkBox2.Checked = false;
+               surNum--;
+               labelSurvive.Text = surNum.ToString();
           }
 
-          private void checkBox3_Click(object sender, EventArgs e)//check sao
+          private void bAns0_Click(object sender, EventArgs e)
           {
-               checkBox3.Checked = false;
+               surNum--;
+               labelSurvive.Text = surNum.ToString();
           }
 
-          private void checkBox4_Click(object sender, EventArgs e)//check sao full
+          private void bAns50_Click(object sender, EventArgs e)
+          {
+               surNum--;
+               labelSurvive.Text = surNum.ToString();
+          }
+
+          private void bAns20_Click(object sender, EventArgs e)
+          {
+               surNum--;
+               labelSurvive.Text = surNum.ToString();
+          }
+
+          private void bAns1_Click(object sender, EventArgs e)
           {
                pTrue.Location = new Point(0, 60);
                pTrue.Visible = true;
                pTrue.Size = new Size(582, 544);
-               Congra();
+          }
+          private void textBox9_Click(object sender, EventArgs e)
+          {
+               MenuQues.Visible = false;
+          }
+          private void bHome_Click(object sender, EventArgs e)
+          {
+               this.Hide();
+               Form1 play = new Form1();
+               play.ShowDialog();
+               this.Close();
+          }
+          private void bRes_Click(object sender, EventArgs e)//restart
+          {
+               DialogResult dlr = MessageBox.Show("Do you want to restart?", "Restart", MessageBoxButtons.YesNo);
+               if (dlr == DialogResult.Yes)//đồng ý thì reset lại màn chơi
+               {
+                    this.Hide();
+                    Play10 play = new Play10(surNum, name, point);
+                    play.ShowDialog();
+                    this.Close();
+               }
           }
 
-          private void checkBox5_Click(object sender, EventArgs e)//check sao
+          private void bNextControl_Click(object sender, EventArgs e)
           {
-               checkBox5.Checked = false;
+               DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.YesNo);
+               if (dlr == DialogResult.Yes)//đồng ý thì sẽ chuyển sang câu tiếp theo
+               {
+                    if (surNum <= 2)//nếu mạng mà nhỏ hơn or bằng 2 thì phải thêm mạng
+                    {
+                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                         AddHeart ah = new AddHeart(surNum, name, point);
+                         ah.ShowDialog();
+                         surNum += 3;
+                         labelSurvive.Text = surNum.ToString();
+                    }
+                    else
+                    {
+                         surNum -= 2;//số mạng sống trừ đi 2
+                         point += 10;
+                         updateDB();
+                         this.Hide();
+                         EndGame play = new EndGame(name);
+                         play.ShowDialog();
+                         this.Close();
+                    }
+               }
+          }
+          int countInstruct = 0;//để ấn button 1 lần thôi
+          int countReturn = 0;//dùng để ấn lại câu hướng dẫn
+          private void bInstruct_Click(object sender, EventArgs e)
+          {
+               countInstruct++;
+               if (countInstruct == 1)
+               {
+                    if (surNum == 0)
+                    {
+                         countReturn++;
+                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                         AddHeart ah = new AddHeart(surNum, name, point);
+                         ah.ShowDialog();
+                         surNum += 3;
+                         labelSurvive.Text = surNum.ToString();
+                    }
+                    else
+                    {
+                         surNum--;
+                         labelSurvive.Text = Convert.ToString(surNum);
+                         MessageBox.Show("1", "Đáp án", MessageBoxButtons.OK);
+                    }
+               }
+               else if (countInstruct == 2 && countReturn == 1)
+               {
+                    MessageBox.Show("1", "Đáp án", MessageBoxButtons.OK);
+                    surNum--;
+                    labelSurvive.Text = Convert.ToString(surNum);
+               }
+               else
+               {
+                    MessageBox.Show("1", "Đáp án", MessageBoxButtons.OK);
+               }
+          }
+
+          private void bShowQues_Click(object sender, EventArgs e)
+          {
+               MenuQues.Size = new Size(475, 166);
+               MenuQues.Location = new Point(74, 68);
+               textBox11.Size = new Size(89, 77);
+               textBox2.Size = new Size(89, 77);
+               textBox3.Size = new Size(89, 77);
+               textBox4.Size = new Size(89, 77);
+               textBox5.Size = new Size(89, 77);
+               textBox6.Size = new Size(89, 77);
+               textBox7.Size = new Size(89, 77);
+               textBox8.Size = new Size(89, 77);
+               textBox9.Size = new Size(89, 77);
+               textBox10.Size = new Size(89, 77);
+               MenuQues.Visible = true;
           }
 
           private void bNext_Click(object sender, EventArgs e)
@@ -83,7 +191,7 @@ namespace GameQUIZZdemo1
                     updateDB();
                     //insert dữ liệu
                     this.Hide();
-                    Play6 play = new Play6(surNum, name, point);
+                    EndGame play = new EndGame(name);
                     play.ShowDialog();
                     this.Close();
                }
@@ -144,107 +252,6 @@ namespace GameQUIZZdemo1
                pStastic.Visible = false;
           }
 
-          private void textBox5_Click(object sender, EventArgs e)//cau 5
-          {
-               MenuQues.Visible = false;
-          }
-
-          private void bHome_Click(object sender, EventArgs e)
-          {
-               this.Hide();
-               Form1 play = new Form1();
-               play.ShowDialog();
-               this.Close();
-          }
-
-          private void bRes_Click(object sender, EventArgs e)//restart
-          {
-               DialogResult dlr = MessageBox.Show("Do you want to restart?", "Restart", MessageBoxButtons.YesNo);
-               if (dlr == DialogResult.Yes)//đồng ý thì reset lại màn chơi
-               {
-                    this.Hide();
-                    Play5 play = new Play5(surNum, name, point);
-                    play.ShowDialog();
-                    this.Close();
-               }
-          }
-
-          private void bNextControl_Click(object sender, EventArgs e)
-          {
-               DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.YesNo);
-               if (dlr == DialogResult.Yes)//đồng ý thì sẽ chuyển sang câu tiếp theo
-               {
-                    if (surNum <= 2)//nếu mạng mà nhỏ hơn or bằng 2 thì phải thêm mạng
-                    {
-                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
-                         AddHeart ah = new AddHeart(surNum, name, point);
-                         ah.ShowDialog();
-                         surNum += 3;
-                         labelSurvive.Text = surNum.ToString();
-                    }
-                    else
-                    {
-                         surNum -= 2;//số mạng sống trừ đi 2
-                         point += 10;
-                         updateDB();
-                         this.Hide();
-                         Play6 play = new Play6(surNum, name, point);
-                         play.ShowDialog();
-                         this.Close();
-                    }
-               }
-          }
-          int countInstruct = 0;//để ấn button 1 lần thôi
-          int countReturn = 0;//dùng để ấn lại câu hướng dẫn
-          private void bInstruct_Click(object sender, EventArgs e)
-          {
-               countInstruct++;
-               if (countInstruct == 1)
-               {
-                    if (surNum == 0)
-                    {
-                         countReturn++;
-                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
-                         AddHeart ah = new AddHeart(surNum, name, point);
-                         ah.ShowDialog();
-                         surNum += 3;
-                         labelSurvive.Text = surNum.ToString();
-                    }
-                    else
-                    {
-                         surNum--;
-                         labelSurvive.Text = Convert.ToString(surNum);
-                         MessageBox.Show("80 sao chứ gì nữa :>", "Đáp án", MessageBoxButtons.OK);
-                    }
-               }
-               else if (countInstruct == 2 && countReturn == 1)
-               {
-                    MessageBox.Show("80 sao chứ gì nữa :>", "Đáp án", MessageBoxButtons.OK);
-                    surNum--;
-                    labelSurvive.Text = Convert.ToString(surNum);
-               }
-               else
-               {
-                    MessageBox.Show("80 sao chứ gì nữa :>", "Đáp án", MessageBoxButtons.OK);
-               }
-          }
-
-          private void bShowQues_Click(object sender, EventArgs e)
-          {
-               MenuQues.Size = new Size(475, 166);
-               MenuQues.Location = new Point(74, 68);
-               textBox11.Size = new Size(89, 77);
-               textBox2.Size = new Size(89, 77);
-               textBox3.Size = new Size(89, 77);
-               textBox4.Size = new Size(89, 77);
-               textBox5.Size = new Size(89, 77);
-               textBox6.Size = new Size(89, 77);
-               textBox7.Size = new Size(89, 77);
-               textBox8.Size = new Size(89, 77);
-               textBox9.Size = new Size(89, 77);
-               textBox10.Size = new Size(89, 77);
-               MenuQues.Visible = true;
-          }
           private void btnAddHeart_Click(object sender, EventArgs e)//thêm mạng
           {
                if (surNum == 0)//nếu hết mạng thì mới cho sự trợ giúp
@@ -258,6 +265,7 @@ namespace GameQUIZZdemo1
                }
 
           }
+
           public void Congra()//các câu chúc mừng
           {
                int random;

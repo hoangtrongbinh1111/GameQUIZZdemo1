@@ -46,6 +46,7 @@ namespace GameQUIZZdemo1
                     pTrue.Location = new Point(0, 60);
                     pTrue.Visible = true;
                     pTrue.Size = new Size(582, 544);
+                    Congra();
                }
                else//ko thì reset lại câu trả lời
                {
@@ -75,38 +76,84 @@ namespace GameQUIZZdemo1
 
           private void bNextControl_Click(object sender, EventArgs e)//chuyển qua câu tiếp theo
           {
-               DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.OK);
-               if (dlr == DialogResult.OK)//đồng ý thì reset lại màn chơi
+               DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.YesNo);
+               if (dlr == DialogResult.Yes)//đồng ý thì sẽ chuyển sang câu tiếp theo
                {
-                    point += 10;
-                    surNum -= 2;//số mạng sống trừ đi 2
-                    updateDB();
-                    this.Hide();
-                    Play3 play = new Play3(surNum,name,point);
-                    play.ShowDialog();
-                    this.Close();
+                    if (surNum <= 2)//nếu mạng mà nhỏ hơn or bằng 2 thì phải thêm mạng
+                    {
+                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                         AddHeart ah = new AddHeart(surNum, name, point);
+                         ah.ShowDialog();
+                         surNum += 3;
+                         labelSurvive.Text = surNum.ToString();
+                    }
+                    else
+                    {
+                         surNum -= 2;//số mạng sống trừ đi 2
+                         point += 10;
+                         updateDB();
+                         this.Hide();
+                         Play3 play = new Play3(surNum, name, point);
+                         play.ShowDialog();
+                         this.Close();
+                    }
                }
           }
-
+          int countInstruct = 0;//để ấn button 1 lần thôi
+          int countReturn = 0;//dùng để ấn lại câu hướng dẫn
           private void bInstruct_Click(object sender, EventArgs e)//đáp án
           {
-               DialogResult dlr = MessageBox.Show("a=10", "Đáp án", MessageBoxButtons.OK);
-               if (dlr == DialogResult.OK)//đồng ý thì reset lại màn chơi
+               countInstruct++;
+               if (countInstruct == 1)
                {
-                    surNum -= 1;//số mạng sống trừ đi 2
+                    if (surNum == 0)
+                    {
+                         countReturn++;
+                         MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                         AddHeart ah = new AddHeart(surNum, name, point);
+                         ah.ShowDialog();
+                         surNum += 3;
+                         labelSurvive.Text = surNum.ToString();
+                    }
+                    else
+                    {
+                         surNum--;
+                         labelSurvive.Text = Convert.ToString(surNum);
+                         MessageBox.Show("10", "Đáp án", MessageBoxButtons.OK);
+                    }
+               }
+               else if (countInstruct == 2 && countReturn == 1)
+               {
+                    MessageBox.Show("10", "Đáp án", MessageBoxButtons.OK);
+                    surNum--;
                     labelSurvive.Text = Convert.ToString(surNum);
+               }
+               else
+               {
+                    MessageBox.Show("10", "Đáp án", MessageBoxButtons.OK);
                }
           }
 
           private void bNext_Click(object sender, EventArgs e)//chuyển câu sau
           {
-               point += 10;
-               updateDB();
-               //insert dữ liệu
-               this.Hide();
-               Play3 play = new Play3(surNum,name,point);
-               play.ShowDialog();
-               this.Close();
+               if (surNum == 0)
+               {
+                    MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
+                    AddHeart ah = new AddHeart(surNum, name, point);
+                    ah.ShowDialog();
+                    surNum += 3;
+                    labelSurvive.Text = surNum.ToString();
+               }
+               else
+               {
+                    point += 10;
+                    updateDB();
+                    //insert dữ liệu
+                    this.Hide();
+                    Play3 play = new Play3(surNum, name, point);
+                    play.ShowDialog();
+                    this.Close();
+               }
           }
 
           private void bStastic_Click(object sender, EventArgs e)
@@ -184,6 +231,60 @@ namespace GameQUIZZdemo1
           private void textBox2_Click(object sender, EventArgs e)
           {
                MenuQues.Visible = false;
+          }
+
+          public void Congra()//các câu chúc mừng
+          {
+               int random;
+               Random rd = new Random();
+               random = rd.Next(1, 10);
+               switch (random)
+               {
+                    case 1:
+                         label3.Text = "You are so good";
+                         break;
+                    case 2:
+                         label3.Text = "Good business";
+                         break;
+                    case 3:
+                         label3.Text = "All the best.";
+                         break;
+                    case 4:
+                         label3.Text = "Dream Big. Shine Bright.";
+                         break;
+                    case 5:
+                         label3.Text = "I believe in you";
+                         break;
+                    case 6:
+                         label3.Text = "Good job....";
+                         break;
+                    case 7:
+                         label3.Text = "prettyyyyyyyyy";
+                         break;
+                    case 8:
+                         label3.Text = "Come on go go....";
+                         break;
+                    case 9:
+                         label3.Text = "Much Funnnn ???";
+                         break;
+                    case 10:
+                         label3.Text = "Success and success..";
+                         break;
+               }
+          }
+
+          private void btnAddHeart_Click(object sender, EventArgs e)//thêm mạng
+          {
+               if (surNum == 0)//nếu hết mạng thì mới cho sự trợ giúp
+               {
+                    AddHeart ah = new AddHeart(surNum, name, point);
+                    ah.ShowDialog();
+               }
+               else
+               {
+                    MessageBox.Show("Hết mạng mới được thêm mạng", "Thông báo", MessageBoxButtons.OK);
+               }
+
           }
      }
 }

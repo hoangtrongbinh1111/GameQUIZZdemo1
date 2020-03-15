@@ -43,23 +43,19 @@
                this.label2 = new System.Windows.Forms.Label();
                this.timer1 = new System.Windows.Forms.Timer(this.components);
                this.pTrue = new System.Windows.Forms.Panel();
+               this.pictureBox3 = new System.Windows.Forms.PictureBox();
                this.pStastic = new System.Windows.Forms.Panel();
                this.button5 = new System.Windows.Forms.Button();
                this.top1 = new System.Windows.Forms.Label();
                this.top3 = new System.Windows.Forms.Label();
                this.label5 = new System.Windows.Forms.Label();
                this.top2 = new System.Windows.Forms.Label();
-               this.button6 = new System.Windows.Forms.Button();
+               this.pTrue1 = new System.Windows.Forms.PictureBox();
+               this.btnAddHeart = new System.Windows.Forms.Button();
                this.bStastic = new System.Windows.Forms.Button();
                this.bNext = new System.Windows.Forms.Button();
                this.label3 = new System.Windows.Forms.Label();
                this.pictureBox1 = new System.Windows.Forms.PictureBox();
-               this.pWrong = new System.Windows.Forms.PictureBox();
-               this.pTrue1 = new System.Windows.Forms.PictureBox();
-               this.p3 = new System.Windows.Forms.PictureBox();
-               this.p4 = new System.Windows.Forms.PictureBox();
-               this.p2 = new System.Windows.Forms.PictureBox();
-               this.p1 = new System.Windows.Forms.PictureBox();
                this.MenuQues = new System.Windows.Forms.TableLayoutPanel();
                this.textBox10 = new System.Windows.Forms.TextBox();
                this.textBox9 = new System.Windows.Forms.TextBox();
@@ -71,18 +67,24 @@
                this.textBox3 = new System.Windows.Forms.TextBox();
                this.textBox2 = new System.Windows.Forms.TextBox();
                this.textBox1 = new System.Windows.Forms.TextBox();
+               this.pWrong = new System.Windows.Forms.PictureBox();
+               this.p3 = new System.Windows.Forms.PictureBox();
+               this.p4 = new System.Windows.Forms.PictureBox();
+               this.p2 = new System.Windows.Forms.PictureBox();
+               this.p1 = new System.Windows.Forms.PictureBox();
                this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                this.pTrue.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
                this.pStastic.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-               ((System.ComponentModel.ISupportInitialize)(this.pWrong)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pTrue1)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+               this.MenuQues.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pWrong)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.p4)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
-               this.MenuQues.SuspendLayout();
                this.SuspendLayout();
                // 
                // panel1
@@ -129,11 +131,11 @@
                this.labelSurvive.BackColor = System.Drawing.Color.Red;
                this.labelSurvive.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.labelSurvive.ForeColor = System.Drawing.Color.Yellow;
-               this.labelSurvive.Location = new System.Drawing.Point(532, 18);
+               this.labelSurvive.Location = new System.Drawing.Point(536, 18);
                this.labelSurvive.Name = "labelSurvive";
-               this.labelSurvive.Size = new System.Drawing.Size(28, 21);
+               this.labelSurvive.Size = new System.Drawing.Size(19, 21);
                this.labelSurvive.TabIndex = 7;
-               this.labelSurvive.Text = "60";
+               this.labelSurvive.Text = "8";
                // 
                // pictureBox2
                // 
@@ -230,18 +232,28 @@
                // pTrue
                // 
                this.pTrue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.pTrue.Controls.Add(this.pictureBox3);
                this.pTrue.Controls.Add(this.pStastic);
-               this.pTrue.Controls.Add(this.button6);
+               this.pTrue.Controls.Add(this.btnAddHeart);
                this.pTrue.Controls.Add(this.bStastic);
                this.pTrue.Controls.Add(this.bNext);
                this.pTrue.Controls.Add(this.label3);
                this.pTrue.Controls.Add(this.pictureBox1);
-               this.pTrue.Location = new System.Drawing.Point(1, 69);
+               this.pTrue.Location = new System.Drawing.Point(8, 98);
                this.pTrue.Name = "pTrue";
-               this.pTrue.Size = new System.Drawing.Size(63, 71);
+               this.pTrue.Size = new System.Drawing.Size(56, 39);
                this.pTrue.TabIndex = 9;
                this.pTrue.Visible = false;
                this.pTrue.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+               // 
+               // pictureBox3
+               // 
+               this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+               this.pictureBox3.Location = new System.Drawing.Point(7, 376);
+               this.pictureBox3.Name = "pictureBox3";
+               this.pictureBox3.Size = new System.Drawing.Size(575, 167);
+               this.pictureBox3.TabIndex = 6;
+               this.pictureBox3.TabStop = false;
                // 
                // pStastic
                // 
@@ -308,14 +320,30 @@
                this.top2.TabIndex = 0;
                this.top2.Text = "label4";
                // 
-               // button6
+               // pTrue1
                // 
-               this.button6.Location = new System.Drawing.Point(305, 443);
-               this.button6.Name = "button6";
-               this.button6.Size = new System.Drawing.Size(75, 23);
-               this.button6.TabIndex = 4;
-               this.button6.Text = "Xem quang cao";
-               this.button6.UseVisualStyleBackColor = true;
+               this.pTrue1.BackgroundImage = global::GameQUIZZdemo1.Properties.Resources._true;
+               this.pTrue1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pTrue1.Location = new System.Drawing.Point(490, 155);
+               this.pTrue1.Name = "pTrue1";
+               this.pTrue1.Size = new System.Drawing.Size(57, 50);
+               this.pTrue1.TabIndex = 16;
+               this.pTrue1.TabStop = false;
+               this.pTrue1.Visible = false;
+               // 
+               // btnAddHeart
+               // 
+               this.btnAddHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddHeart.BackgroundImage")));
+               this.btnAddHeart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.btnAddHeart.FlatAppearance.BorderSize = 0;
+               this.btnAddHeart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.btnAddHeart.Location = new System.Drawing.Point(401, 298);
+               this.btnAddHeart.Name = "btnAddHeart";
+               this.btnAddHeart.Size = new System.Drawing.Size(70, 61);
+               this.btnAddHeart.TabIndex = 4;
+               this.btnAddHeart.TabStop = false;
+               this.btnAddHeart.UseVisualStyleBackColor = true;
+               this.btnAddHeart.Click += new System.EventHandler(this.btnAddHeart_Click);
                // 
                // bStastic
                // 
@@ -323,7 +351,7 @@
                this.bStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.bStastic.FlatAppearance.BorderSize = 0;
                this.bStastic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bStastic.Location = new System.Drawing.Point(221, 254);
+               this.bStastic.Location = new System.Drawing.Point(235, 254);
                this.bStastic.Name = "bStastic";
                this.bStastic.Size = new System.Drawing.Size(139, 116);
                this.bStastic.TabIndex = 3;
@@ -333,109 +361,40 @@
                // 
                // bNext
                // 
+               this.bNext.BackColor = System.Drawing.SystemColors.Control;
                this.bNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNext.BackgroundImage")));
-               this.bNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
                this.bNext.FlatAppearance.BorderSize = 0;
                this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bNext.Location = new System.Drawing.Point(76, 254);
+               this.bNext.Location = new System.Drawing.Point(66, 298);
                this.bNext.Name = "bNext";
-               this.bNext.Size = new System.Drawing.Size(139, 116);
+               this.bNext.Size = new System.Drawing.Size(139, 72);
                this.bNext.TabIndex = 2;
                this.bNext.TabStop = false;
-               this.bNext.UseVisualStyleBackColor = true;
+               this.bNext.UseVisualStyleBackColor = false;
                this.bNext.Click += new System.EventHandler(this.bNext_Click);
                // 
                // label3
                // 
                this.label3.AutoSize = true;
-               this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+               this.label3.BackColor = System.Drawing.Color.Khaki;
                this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.label3.ForeColor = System.Drawing.Color.Red;
-               this.label3.Location = new System.Drawing.Point(175, 124);
+               this.label3.Location = new System.Drawing.Point(149, 134);
                this.label3.Name = "label3";
-               this.label3.Size = new System.Drawing.Size(199, 26);
+               this.label3.Size = new System.Drawing.Size(89, 26);
                this.label3.TabIndex = 1;
-               this.label3.Text = "Congratulations!!!";
-               this.label3.Click += new System.EventHandler(this.label3_Click);
+               this.label3.Text = "Congra";
                // 
                // pictureBox1
                // 
                this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
                this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.pictureBox1.Location = new System.Drawing.Point(76, 3);
+               this.pictureBox1.Location = new System.Drawing.Point(66, 3);
                this.pictureBox1.Name = "pictureBox1";
-               this.pictureBox1.Size = new System.Drawing.Size(409, 245);
+               this.pictureBox1.Size = new System.Drawing.Size(449, 269);
                this.pictureBox1.TabIndex = 0;
                this.pictureBox1.TabStop = false;
-               // 
-               // pWrong
-               // 
-               this.pWrong.BackgroundImage = global::GameQUIZZdemo1.Properties.Resources.wrong;
-               this.pWrong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pWrong.ErrorImage = null;
-               this.pWrong.Location = new System.Drawing.Point(212, 334);
-               this.pWrong.Name = "pWrong";
-               this.pWrong.Size = new System.Drawing.Size(47, 61);
-               this.pWrong.TabIndex = 15;
-               this.pWrong.TabStop = false;
-               this.pWrong.Visible = false;
-               // 
-               // pTrue1
-               // 
-               this.pTrue1.BackgroundImage = global::GameQUIZZdemo1.Properties.Resources._true;
-               this.pTrue1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pTrue1.Location = new System.Drawing.Point(480, 159);
-               this.pTrue1.Name = "pTrue1";
-               this.pTrue1.Size = new System.Drawing.Size(57, 50);
-               this.pTrue1.TabIndex = 16;
-               this.pTrue1.TabStop = false;
-               this.pTrue1.Visible = false;
-               // 
-               // p3
-               // 
-               this.p3.BackColor = System.Drawing.Color.Transparent;
-               this.p3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p3.BackgroundImage")));
-               this.p3.Location = new System.Drawing.Point(145, 434);
-               this.p3.Name = "p3";
-               this.p3.Size = new System.Drawing.Size(134, 128);
-               this.p3.TabIndex = 8;
-               this.p3.TabStop = false;
-               this.p3.Click += new System.EventHandler(this.p3_Click);
-               // 
-               // p4
-               // 
-               this.p4.BackColor = System.Drawing.Color.Transparent;
-               this.p4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p4.BackgroundImage")));
-               this.p4.Location = new System.Drawing.Point(375, 420);
-               this.p4.Name = "p4";
-               this.p4.Size = new System.Drawing.Size(139, 131);
-               this.p4.TabIndex = 7;
-               this.p4.TabStop = false;
-               this.p4.Click += new System.EventHandler(this.p4_Click);
-               // 
-               // p2
-               // 
-               this.p2.BackColor = System.Drawing.Color.Transparent;
-               this.p2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p2.BackgroundImage")));
-               this.p2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.p2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("p2.ErrorImage")));
-               this.p2.Location = new System.Drawing.Point(355, 222);
-               this.p2.Name = "p2";
-               this.p2.Size = new System.Drawing.Size(159, 106);
-               this.p2.TabIndex = 6;
-               this.p2.TabStop = false;
-               this.p2.Click += new System.EventHandler(this.p2_Click);
-               // 
-               // p1
-               // 
-               this.p1.BackColor = System.Drawing.Color.Transparent;
-               this.p1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p1.BackgroundImage")));
-               this.p1.Location = new System.Drawing.Point(39, 267);
-               this.p1.Name = "p1";
-               this.p1.Size = new System.Drawing.Size(115, 117);
-               this.p1.TabIndex = 4;
-               this.p1.TabStop = false;
-               this.p1.Click += new System.EventHandler(this.p1_Click);
                // 
                // MenuQues
                // 
@@ -595,6 +554,64 @@
                this.textBox1.Text = "\r\nCâu 1";
                this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
                // 
+               // pWrong
+               // 
+               this.pWrong.BackgroundImage = global::GameQUIZZdemo1.Properties.Resources.wrong;
+               this.pWrong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pWrong.ErrorImage = null;
+               this.pWrong.Location = new System.Drawing.Point(212, 334);
+               this.pWrong.Name = "pWrong";
+               this.pWrong.Size = new System.Drawing.Size(47, 61);
+               this.pWrong.TabIndex = 15;
+               this.pWrong.TabStop = false;
+               this.pWrong.Visible = false;
+               // 
+               // p3
+               // 
+               this.p3.BackColor = System.Drawing.Color.Transparent;
+               this.p3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p3.BackgroundImage")));
+               this.p3.Location = new System.Drawing.Point(145, 434);
+               this.p3.Name = "p3";
+               this.p3.Size = new System.Drawing.Size(134, 128);
+               this.p3.TabIndex = 8;
+               this.p3.TabStop = false;
+               this.p3.Click += new System.EventHandler(this.p3_Click);
+               // 
+               // p4
+               // 
+               this.p4.BackColor = System.Drawing.Color.Transparent;
+               this.p4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p4.BackgroundImage")));
+               this.p4.Location = new System.Drawing.Point(375, 420);
+               this.p4.Name = "p4";
+               this.p4.Size = new System.Drawing.Size(139, 131);
+               this.p4.TabIndex = 7;
+               this.p4.TabStop = false;
+               this.p4.Click += new System.EventHandler(this.p4_Click);
+               // 
+               // p2
+               // 
+               this.p2.BackColor = System.Drawing.Color.Transparent;
+               this.p2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p2.BackgroundImage")));
+               this.p2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.p2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("p2.ErrorImage")));
+               this.p2.Location = new System.Drawing.Point(355, 222);
+               this.p2.Name = "p2";
+               this.p2.Size = new System.Drawing.Size(159, 106);
+               this.p2.TabIndex = 6;
+               this.p2.TabStop = false;
+               this.p2.Click += new System.EventHandler(this.p2_Click);
+               // 
+               // p1
+               // 
+               this.p1.BackColor = System.Drawing.Color.Transparent;
+               this.p1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("p1.BackgroundImage")));
+               this.p1.Location = new System.Drawing.Point(39, 267);
+               this.p1.Name = "p1";
+               this.p1.Size = new System.Drawing.Size(115, 117);
+               this.p1.TabIndex = 4;
+               this.p1.TabStop = false;
+               this.p1.Click += new System.EventHandler(this.p1_Click);
+               // 
                // Play1
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,17 +639,18 @@
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
                this.pTrue.ResumeLayout(false);
                this.pTrue.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
                this.pStastic.ResumeLayout(false);
                this.pStastic.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-               ((System.ComponentModel.ISupportInitialize)(this.pWrong)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pTrue1)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+               this.MenuQues.ResumeLayout(false);
+               this.MenuQues.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pWrong)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.p4)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
-               this.MenuQues.ResumeLayout(false);
-               this.MenuQues.PerformLayout();
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -657,7 +675,7 @@
           private System.Windows.Forms.Button button1;
           private System.Windows.Forms.PictureBox pictureBox2;
           private System.Windows.Forms.Button bStastic;
-          private System.Windows.Forms.Button button6;
+          private System.Windows.Forms.Button btnAddHeart;
           private System.Windows.Forms.Label labelSurvive;
           private System.Windows.Forms.PictureBox pWrong;
           private System.Windows.Forms.PictureBox pTrue1;
@@ -684,5 +702,6 @@
           private System.Windows.Forms.TextBox textBox2;
           private System.Windows.Forms.TextBox textBox1;
           private System.Windows.Forms.Label lbPoint;
+          private System.Windows.Forms.PictureBox pictureBox3;
      }
 }

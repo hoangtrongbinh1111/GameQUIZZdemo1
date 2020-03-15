@@ -46,10 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddHeart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddHeart.Designer.cs">
+      <DependentUpon>AddHeart.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EndGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndGame.Designer.cs">
+      <DependentUpon>EndGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -62,6 +74,12 @@
     </Compile>
     <Compile Include="Play1.Designer.cs">
       <DependentUpon>Play1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Play10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Play10.Designer.cs">
+      <DependentUpon>Play10.cs</DependentUpon>
     </Compile>
     <Compile Include="Play2.cs">
       <SubType>Form</SubType>
@@ -105,13 +123,28 @@
     <Compile Include="Play8.Designer.cs">
       <DependentUpon>Play8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Play9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Play9.Designer.cs">
+      <DependentUpon>Play9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddHeart.resx">
+      <DependentUpon>AddHeart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndGame.resx">
+      <DependentUpon>EndGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Play1.resx">
       <DependentUpon>Play1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Play10.resx">
+      <DependentUpon>Play10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Play2.resx">
       <DependentUpon>Play2.cs</DependentUpon>
@@ -133,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Play8.resx">
       <DependentUpon>Play8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Play9.resx">
+      <DependentUpon>Play9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -124,10 +124,22 @@ namespace GameQUIZZdemo1
                          Play7 pl7 = new Play7(soMang, name, round);
                          Scene(pl7);
                          break;
-                    //case 80:
-                    //     Play8 pl8 = new Play8(soMang, name, round);
-                    //     Scene(pl8);
-                    //     break;
+                    case 80:
+                         Play8 pl8 = new Play8(soMang, name, round);
+                         Scene(pl8);
+                         break;
+                    case 90:
+                         Play9 pl9 = new Play9(soMang, name, round);
+                         Scene(pl9);
+                         break;
+                    case 100:
+                         Play10 pl10 = new Play10(soMang, name, round);
+                         Scene(pl10);
+                         break;
+                    default:
+                         EndGame eg = new EndGame(name);
+                         Scene(eg);
+                         break;
                }
           }
           private void Form1_Load(object sender, EventArgs e)
@@ -154,6 +166,38 @@ namespace GameQUIZZdemo1
           private void pStatic_Click(object sender, EventArgs e)
           {
 
+          }
+          int countInfo = 0;//nếu số lần lẻ thì hướng dãn xuất hiện, chẵn thì biến mất
+          private void bInstruct_Click(object sender, EventArgs e)
+          {
+               countInfo++;
+               if (countInfo % 2 == 1)
+               {
+                    pInstruct.Visible = true;
+                    pInstruct.Location = new Point(81, 24);
+                    pInstruct.Size = new Size(477, 562);
+               }
+               else
+                    pInstruct.Visible = false;
+               
+          }
+
+          private void button2_Click(object sender, EventArgs e)
+          {
+               pInstruct.Visible = false;
+          }
+
+          
+          private void bLoud_Click(object sender, EventArgs e)
+          {
+               bLoud.Visible = false;
+               bMute.Visible = true;
+          }
+
+          private void bMute_Click(object sender, EventArgs e)
+          {
+               bMute.Visible = false;
+               bLoud.Visible = true;
           }
      }
 }

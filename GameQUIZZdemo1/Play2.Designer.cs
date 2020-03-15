@@ -43,18 +43,6 @@
                this.textBox1 = new System.Windows.Forms.TextBox();
                this.tbAnswer = new System.Windows.Forms.TextBox();
                this.panel2 = new System.Windows.Forms.Panel();
-               this.pTrue = new System.Windows.Forms.Panel();
-               this.pStastic = new System.Windows.Forms.Panel();
-               this.button6 = new System.Windows.Forms.Button();
-               this.top1 = new System.Windows.Forms.Label();
-               this.top3 = new System.Windows.Forms.Label();
-               this.label5 = new System.Windows.Forms.Label();
-               this.top2 = new System.Windows.Forms.Label();
-               this.button8 = new System.Windows.Forms.Button();
-               this.bStastic = new System.Windows.Forms.Button();
-               this.bNext = new System.Windows.Forms.Button();
-               this.label3 = new System.Windows.Forms.Label();
-               this.pictureBox3 = new System.Windows.Forms.PictureBox();
                this.MenuQues = new System.Windows.Forms.TableLayoutPanel();
                this.textBox10 = new System.Windows.Forms.TextBox();
                this.textBox9 = new System.Windows.Forms.TextBox();
@@ -68,14 +56,28 @@
                this.textBox11 = new System.Windows.Forms.TextBox();
                this.button5 = new System.Windows.Forms.Button();
                this.pictureBox1 = new System.Windows.Forms.PictureBox();
+               this.pTrue = new System.Windows.Forms.Panel();
+               this.pictureBox3 = new System.Windows.Forms.PictureBox();
+               this.pStastic = new System.Windows.Forms.Panel();
+               this.button1 = new System.Windows.Forms.Button();
+               this.top1 = new System.Windows.Forms.Label();
+               this.top3 = new System.Windows.Forms.Label();
+               this.label5 = new System.Windows.Forms.Label();
+               this.top2 = new System.Windows.Forms.Label();
+               this.btnAddHeart = new System.Windows.Forms.Button();
+               this.bStastic = new System.Windows.Forms.Button();
+               this.bNext = new System.Windows.Forms.Button();
+               this.label3 = new System.Windows.Forms.Label();
+               this.pictureBox4 = new System.Windows.Forms.PictureBox();
                this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                this.panel2.SuspendLayout();
-               this.pTrue.SuspendLayout();
-               this.pStastic.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
                this.MenuQues.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+               this.pTrue.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+               this.pStastic.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
                this.SuspendLayout();
                // 
                // panel1
@@ -245,145 +247,6 @@
                this.panel2.Size = new System.Drawing.Size(58, 35);
                this.panel2.TabIndex = 9;
                // 
-               // pTrue
-               // 
-               this.pTrue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.pTrue.Controls.Add(this.pStastic);
-               this.pTrue.Controls.Add(this.button8);
-               this.pTrue.Controls.Add(this.bStastic);
-               this.pTrue.Controls.Add(this.bNext);
-               this.pTrue.Controls.Add(this.label3);
-               this.pTrue.Controls.Add(this.pictureBox3);
-               this.pTrue.Location = new System.Drawing.Point(1, 68);
-               this.pTrue.Name = "pTrue";
-               this.pTrue.Size = new System.Drawing.Size(43, 57);
-               this.pTrue.TabIndex = 11;
-               this.pTrue.Visible = false;
-               // 
-               // pStastic
-               // 
-               this.pStastic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pStastic.BackgroundImage")));
-               this.pStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pStastic.Controls.Add(this.button6);
-               this.pStastic.Controls.Add(this.top1);
-               this.pStastic.Controls.Add(this.top3);
-               this.pStastic.Controls.Add(this.label5);
-               this.pStastic.Controls.Add(this.top2);
-               this.pStastic.Location = new System.Drawing.Point(76, 0);
-               this.pStastic.Name = "pStastic";
-               this.pStastic.Size = new System.Drawing.Size(64, 56);
-               this.pStastic.TabIndex = 5;
-               this.pStastic.Visible = false;
-               // 
-               // button6
-               // 
-               this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-               this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.button6.FlatAppearance.BorderSize = 0;
-               this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.button6.Location = new System.Drawing.Point(3, 3);
-               this.button6.Name = "button6";
-               this.button6.Size = new System.Drawing.Size(40, 41);
-               this.button6.TabIndex = 4;
-               this.button6.TabStop = false;
-               this.button6.UseVisualStyleBackColor = true;
-               this.button6.Click += new System.EventHandler(this.button6_Click);
-               // 
-               // top1
-               // 
-               this.top1.AutoSize = true;
-               this.top1.Location = new System.Drawing.Point(185, 3);
-               this.top1.Name = "top1";
-               this.top1.Size = new System.Drawing.Size(35, 13);
-               this.top1.TabIndex = 3;
-               this.top1.Text = "label7";
-               // 
-               // top3
-               // 
-               this.top3.AutoSize = true;
-               this.top3.Location = new System.Drawing.Point(295, 105);
-               this.top3.Name = "top3";
-               this.top3.Size = new System.Drawing.Size(35, 13);
-               this.top3.TabIndex = 2;
-               this.top3.Text = "label6";
-               // 
-               // label5
-               // 
-               this.label5.AutoSize = true;
-               this.label5.Location = new System.Drawing.Point(414, 243);
-               this.label5.Name = "label5";
-               this.label5.Size = new System.Drawing.Size(35, 13);
-               this.label5.TabIndex = 1;
-               this.label5.Text = "label5";
-               // 
-               // top2
-               // 
-               this.top2.AutoSize = true;
-               this.top2.Location = new System.Drawing.Point(65, 74);
-               this.top2.Name = "top2";
-               this.top2.Size = new System.Drawing.Size(35, 13);
-               this.top2.TabIndex = 0;
-               this.top2.Text = "label4";
-               // 
-               // button8
-               // 
-               this.button8.Location = new System.Drawing.Point(305, 443);
-               this.button8.Name = "button8";
-               this.button8.Size = new System.Drawing.Size(123, 23);
-               this.button8.TabIndex = 4;
-               this.button8.Text = "Xem quang cao";
-               this.button8.UseVisualStyleBackColor = true;
-               // 
-               // bStastic
-               // 
-               this.bStastic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bStastic.BackgroundImage")));
-               this.bStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bStastic.FlatAppearance.BorderSize = 0;
-               this.bStastic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bStastic.Location = new System.Drawing.Point(221, 254);
-               this.bStastic.Name = "bStastic";
-               this.bStastic.Size = new System.Drawing.Size(139, 116);
-               this.bStastic.TabIndex = 3;
-               this.bStastic.TabStop = false;
-               this.bStastic.UseVisualStyleBackColor = true;
-               this.bStastic.Click += new System.EventHandler(this.bStastic_Click);
-               // 
-               // bNext
-               // 
-               this.bNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNext.BackgroundImage")));
-               this.bNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bNext.FlatAppearance.BorderSize = 0;
-               this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bNext.Location = new System.Drawing.Point(76, 254);
-               this.bNext.Name = "bNext";
-               this.bNext.Size = new System.Drawing.Size(139, 116);
-               this.bNext.TabIndex = 2;
-               this.bNext.TabStop = false;
-               this.bNext.UseVisualStyleBackColor = true;
-               this.bNext.Click += new System.EventHandler(this.bNext_Click);
-               // 
-               // label3
-               // 
-               this.label3.AutoSize = true;
-               this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-               this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.label3.ForeColor = System.Drawing.Color.Red;
-               this.label3.Location = new System.Drawing.Point(175, 124);
-               this.label3.Name = "label3";
-               this.label3.Size = new System.Drawing.Size(199, 26);
-               this.label3.TabIndex = 1;
-               this.label3.Text = "Congratulations!!!";
-               // 
-               // pictureBox3
-               // 
-               this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-               this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.pictureBox3.Location = new System.Drawing.Point(76, 3);
-               this.pictureBox3.Name = "pictureBox3";
-               this.pictureBox3.Size = new System.Drawing.Size(409, 245);
-               this.pictureBox3.TabIndex = 0;
-               this.pictureBox3.TabStop = false;
-               // 
                // MenuQues
                // 
                this.MenuQues.ColumnCount = 5;
@@ -407,6 +270,7 @@
                this.MenuQues.RowCount = 2;
                this.MenuQues.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
                this.MenuQues.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+               this.MenuQues.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
                this.MenuQues.Size = new System.Drawing.Size(42, 57);
                this.MenuQues.TabIndex = 18;
                this.MenuQues.Visible = false;
@@ -567,13 +431,168 @@
                this.pictureBox1.TabIndex = 8;
                this.pictureBox1.TabStop = false;
                // 
+               // pTrue
+               // 
+               this.pTrue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.pTrue.Controls.Add(this.pictureBox3);
+               this.pTrue.Controls.Add(this.pStastic);
+               this.pTrue.Controls.Add(this.btnAddHeart);
+               this.pTrue.Controls.Add(this.bStastic);
+               this.pTrue.Controls.Add(this.bNext);
+               this.pTrue.Controls.Add(this.label3);
+               this.pTrue.Controls.Add(this.pictureBox4);
+               this.pTrue.Location = new System.Drawing.Point(1, 65);
+               this.pTrue.Name = "pTrue";
+               this.pTrue.Size = new System.Drawing.Size(45, 60);
+               this.pTrue.TabIndex = 19;
+               this.pTrue.Visible = false;
+               // 
+               // pictureBox3
+               // 
+               this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+               this.pictureBox3.Location = new System.Drawing.Point(7, 376);
+               this.pictureBox3.Name = "pictureBox3";
+               this.pictureBox3.Size = new System.Drawing.Size(575, 167);
+               this.pictureBox3.TabIndex = 6;
+               this.pictureBox3.TabStop = false;
+               // 
+               // pStastic
+               // 
+               this.pStastic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pStastic.BackgroundImage")));
+               this.pStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pStastic.Controls.Add(this.button1);
+               this.pStastic.Controls.Add(this.top1);
+               this.pStastic.Controls.Add(this.top3);
+               this.pStastic.Controls.Add(this.label5);
+               this.pStastic.Controls.Add(this.top2);
+               this.pStastic.Location = new System.Drawing.Point(76, 0);
+               this.pStastic.Name = "pStastic";
+               this.pStastic.Size = new System.Drawing.Size(64, 56);
+               this.pStastic.TabIndex = 5;
+               this.pStastic.Visible = false;
+               // 
+               // button1
+               // 
+               this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+               this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.button1.FlatAppearance.BorderSize = 0;
+               this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.button1.Location = new System.Drawing.Point(3, 3);
+               this.button1.Name = "button1";
+               this.button1.Size = new System.Drawing.Size(40, 41);
+               this.button1.TabIndex = 4;
+               this.button1.TabStop = false;
+               this.button1.UseVisualStyleBackColor = true;
+               this.button1.Click += new System.EventHandler(this.button6_Click);
+               // 
+               // top1
+               // 
+               this.top1.AutoSize = true;
+               this.top1.Location = new System.Drawing.Point(185, 3);
+               this.top1.Name = "top1";
+               this.top1.Size = new System.Drawing.Size(35, 13);
+               this.top1.TabIndex = 3;
+               this.top1.Text = "label7";
+               // 
+               // top3
+               // 
+               this.top3.AutoSize = true;
+               this.top3.Location = new System.Drawing.Point(295, 105);
+               this.top3.Name = "top3";
+               this.top3.Size = new System.Drawing.Size(35, 13);
+               this.top3.TabIndex = 2;
+               this.top3.Text = "label6";
+               // 
+               // label5
+               // 
+               this.label5.AutoSize = true;
+               this.label5.Location = new System.Drawing.Point(414, 243);
+               this.label5.Name = "label5";
+               this.label5.Size = new System.Drawing.Size(35, 13);
+               this.label5.TabIndex = 1;
+               this.label5.Text = "label5";
+               // 
+               // top2
+               // 
+               this.top2.AutoSize = true;
+               this.top2.Location = new System.Drawing.Point(65, 74);
+               this.top2.Name = "top2";
+               this.top2.Size = new System.Drawing.Size(35, 13);
+               this.top2.TabIndex = 0;
+               this.top2.Text = "label4";
+               // 
+               // btnAddHeart
+               // 
+               this.btnAddHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddHeart.BackgroundImage")));
+               this.btnAddHeart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.btnAddHeart.FlatAppearance.BorderSize = 0;
+               this.btnAddHeart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.btnAddHeart.Location = new System.Drawing.Point(401, 298);
+               this.btnAddHeart.Name = "btnAddHeart";
+               this.btnAddHeart.Size = new System.Drawing.Size(70, 61);
+               this.btnAddHeart.TabIndex = 4;
+               this.btnAddHeart.TabStop = false;
+               this.btnAddHeart.UseVisualStyleBackColor = true;
+               this.btnAddHeart.Click += new System.EventHandler(this.btnAddHeart_Click);
+               // 
+               // bStastic
+               // 
+               this.bStastic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bStastic.BackgroundImage")));
+               this.bStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bStastic.FlatAppearance.BorderSize = 0;
+               this.bStastic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bStastic.Location = new System.Drawing.Point(235, 254);
+               this.bStastic.Name = "bStastic";
+               this.bStastic.Size = new System.Drawing.Size(139, 116);
+               this.bStastic.TabIndex = 3;
+               this.bStastic.TabStop = false;
+               this.bStastic.UseVisualStyleBackColor = true;
+               this.bStastic.Click += new System.EventHandler(this.bStastic_Click);
+               // 
+               // bNext
+               // 
+               this.bNext.BackColor = System.Drawing.SystemColors.Control;
+               this.bNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNext.BackgroundImage")));
+               this.bNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+               this.bNext.FlatAppearance.BorderSize = 0;
+               this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bNext.Location = new System.Drawing.Point(66, 298);
+               this.bNext.Name = "bNext";
+               this.bNext.Size = new System.Drawing.Size(139, 72);
+               this.bNext.TabIndex = 2;
+               this.bNext.TabStop = false;
+               this.bNext.UseVisualStyleBackColor = false;
+               this.bNext.Click += new System.EventHandler(this.bNext_Click);
+               // 
+               // label3
+               // 
+               this.label3.AutoSize = true;
+               this.label3.BackColor = System.Drawing.Color.Khaki;
+               this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.label3.ForeColor = System.Drawing.Color.Red;
+               this.label3.Location = new System.Drawing.Point(149, 134);
+               this.label3.Name = "label3";
+               this.label3.Size = new System.Drawing.Size(89, 26);
+               this.label3.TabIndex = 1;
+               this.label3.Text = "Congra";
+               // 
+               // pictureBox4
+               // 
+               this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+               this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.pictureBox4.Location = new System.Drawing.Point(66, 3);
+               this.pictureBox4.Name = "pictureBox4";
+               this.pictureBox4.Size = new System.Drawing.Size(449, 269);
+               this.pictureBox4.TabIndex = 0;
+               this.pictureBox4.TabStop = false;
+               // 
                // Play2
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(584, 611);
-               this.Controls.Add(this.MenuQues);
                this.Controls.Add(this.pTrue);
+               this.Controls.Add(this.MenuQues);
                this.Controls.Add(this.button5);
                this.Controls.Add(this.panel2);
                this.Controls.Add(this.pictureBox1);
@@ -589,14 +608,15 @@
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
                this.panel2.ResumeLayout(false);
                this.panel2.PerformLayout();
-               this.pTrue.ResumeLayout(false);
-               this.pTrue.PerformLayout();
-               this.pStastic.ResumeLayout(false);
-               this.pStastic.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
                this.MenuQues.ResumeLayout(false);
                this.MenuQues.PerformLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+               this.pTrue.ResumeLayout(false);
+               this.pTrue.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+               this.pStastic.ResumeLayout(false);
+               this.pStastic.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -619,18 +639,6 @@
           private System.Windows.Forms.PictureBox pictureBox1;
           private System.Windows.Forms.Panel panel2;
           private System.Windows.Forms.Button button5;
-          private System.Windows.Forms.Panel pTrue;
-          private System.Windows.Forms.Panel pStastic;
-          private System.Windows.Forms.Button button6;
-          private System.Windows.Forms.Label top1;
-          private System.Windows.Forms.Label top3;
-          private System.Windows.Forms.Label label5;
-          private System.Windows.Forms.Label top2;
-          private System.Windows.Forms.Button button8;
-          private System.Windows.Forms.Button bStastic;
-          private System.Windows.Forms.Button bNext;
-          private System.Windows.Forms.Label label3;
-          private System.Windows.Forms.PictureBox pictureBox3;
           private System.Windows.Forms.TableLayoutPanel MenuQues;
           private System.Windows.Forms.TextBox textBox10;
           private System.Windows.Forms.TextBox textBox9;
@@ -643,5 +651,18 @@
           private System.Windows.Forms.TextBox textBox2;
           private System.Windows.Forms.TextBox textBox11;
           private System.Windows.Forms.Label lbPoint;
+          private System.Windows.Forms.Panel pTrue;
+          private System.Windows.Forms.PictureBox pictureBox3;
+          private System.Windows.Forms.Panel pStastic;
+          private System.Windows.Forms.Button button1;
+          private System.Windows.Forms.Label top1;
+          private System.Windows.Forms.Label top3;
+          private System.Windows.Forms.Label label5;
+          private System.Windows.Forms.Label top2;
+          private System.Windows.Forms.Button btnAddHeart;
+          private System.Windows.Forms.Button bStastic;
+          private System.Windows.Forms.Button bNext;
+          private System.Windows.Forms.Label label3;
+          private System.Windows.Forms.PictureBox pictureBox4;
      }
 }

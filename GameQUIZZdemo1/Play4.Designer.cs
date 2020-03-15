@@ -31,12 +31,15 @@
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play4));
                this.panel1 = new System.Windows.Forms.Panel();
                this.lbPoint = new System.Windows.Forms.Label();
+               this.bShowQues = new System.Windows.Forms.Button();
                this.labelSurvive = new System.Windows.Forms.Label();
+               this.pictureBox2 = new System.Windows.Forms.PictureBox();
+               this.bInstruct = new System.Windows.Forms.Button();
+               this.bNextControl = new System.Windows.Forms.Button();
+               this.bRes = new System.Windows.Forms.Button();
+               this.bHome = new System.Windows.Forms.Button();
                this.label1 = new System.Windows.Forms.Label();
                this.label2 = new System.Windows.Forms.Label();
-               this.pTrue = new System.Windows.Forms.Panel();
-               this.button8 = new System.Windows.Forms.Button();
-               this.label3 = new System.Windows.Forms.Label();
                this.MenuQues = new System.Windows.Forms.TableLayoutPanel();
                this.textBox10 = new System.Windows.Forms.TextBox();
                this.textBox9 = new System.Windows.Forms.TextBox();
@@ -48,31 +51,30 @@
                this.textBox3 = new System.Windows.Forms.TextBox();
                this.textBox2 = new System.Windows.Forms.TextBox();
                this.textBox11 = new System.Windows.Forms.TextBox();
+               this.pbSun = new System.Windows.Forms.PictureBox();
+               this.pictureBox1 = new System.Windows.Forms.PictureBox();
+               this.pTrue = new System.Windows.Forms.Panel();
+               this.pictureBox3 = new System.Windows.Forms.PictureBox();
                this.pStastic = new System.Windows.Forms.Panel();
-               this.button6 = new System.Windows.Forms.Button();
+               this.button5 = new System.Windows.Forms.Button();
                this.top1 = new System.Windows.Forms.Label();
                this.top3 = new System.Windows.Forms.Label();
                this.label5 = new System.Windows.Forms.Label();
                this.top2 = new System.Windows.Forms.Label();
+               this.btnAddHeart = new System.Windows.Forms.Button();
                this.bStastic = new System.Windows.Forms.Button();
                this.bNext = new System.Windows.Forms.Button();
-               this.pictureBox3 = new System.Windows.Forms.PictureBox();
-               this.pbSun = new System.Windows.Forms.PictureBox();
-               this.pictureBox1 = new System.Windows.Forms.PictureBox();
-               this.bShowQues = new System.Windows.Forms.Button();
-               this.pictureBox2 = new System.Windows.Forms.PictureBox();
-               this.bInstruct = new System.Windows.Forms.Button();
-               this.bNextControl = new System.Windows.Forms.Button();
-               this.bRes = new System.Windows.Forms.Button();
-               this.bHome = new System.Windows.Forms.Button();
+               this.label3 = new System.Windows.Forms.Label();
+               this.pictureBox4 = new System.Windows.Forms.PictureBox();
                this.panel1.SuspendLayout();
-               this.pTrue.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                this.MenuQues.SuspendLayout();
-               this.pStastic.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pbSun)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+               this.pTrue.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+               this.pStastic.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
                this.SuspendLayout();
                // 
                // panel1
@@ -100,6 +102,19 @@
                this.lbPoint.TabIndex = 11;
                this.lbPoint.Text = "10";
                // 
+               // bShowQues
+               // 
+               this.bShowQues.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bShowQues.BackgroundImage")));
+               this.bShowQues.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bShowQues.FlatAppearance.BorderSize = 0;
+               this.bShowQues.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bShowQues.Location = new System.Drawing.Point(281, 8);
+               this.bShowQues.Name = "bShowQues";
+               this.bShowQues.Size = new System.Drawing.Size(48, 44);
+               this.bShowQues.TabIndex = 8;
+               this.bShowQues.UseVisualStyleBackColor = true;
+               this.bShowQues.Click += new System.EventHandler(this.bShowQues_Click);
+               // 
                // labelSurvive
                // 
                this.labelSurvive.AutoSize = true;
@@ -111,6 +126,73 @@
                this.labelSurvive.Size = new System.Drawing.Size(28, 21);
                this.labelSurvive.TabIndex = 7;
                this.labelSurvive.Text = "60";
+               // 
+               // pictureBox2
+               // 
+               this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+               this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pictureBox2.ErrorImage = null;
+               this.pictureBox2.Location = new System.Drawing.Point(513, 1);
+               this.pictureBox2.Name = "pictureBox2";
+               this.pictureBox2.Size = new System.Drawing.Size(69, 56);
+               this.pictureBox2.TabIndex = 6;
+               this.pictureBox2.TabStop = false;
+               // 
+               // bInstruct
+               // 
+               this.bInstruct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bInstruct.BackgroundImage")));
+               this.bInstruct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bInstruct.FlatAppearance.BorderSize = 0;
+               this.bInstruct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bInstruct.Location = new System.Drawing.Point(211, 10);
+               this.bInstruct.Name = "bInstruct";
+               this.bInstruct.Size = new System.Drawing.Size(48, 44);
+               this.bInstruct.TabIndex = 5;
+               this.bInstruct.TabStop = false;
+               this.bInstruct.UseVisualStyleBackColor = true;
+               this.bInstruct.Click += new System.EventHandler(this.bInstruct_Click);
+               // 
+               // bNextControl
+               // 
+               this.bNextControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNextControl.BackgroundImage")));
+               this.bNextControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bNextControl.FlatAppearance.BorderSize = 0;
+               this.bNextControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bNextControl.Location = new System.Drawing.Point(144, 9);
+               this.bNextControl.Name = "bNextControl";
+               this.bNextControl.Size = new System.Drawing.Size(51, 40);
+               this.bNextControl.TabIndex = 4;
+               this.bNextControl.TabStop = false;
+               this.bNextControl.UseVisualStyleBackColor = true;
+               this.bNextControl.Click += new System.EventHandler(this.bNextControl_Click);
+               // 
+               // bRes
+               // 
+               this.bRes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bRes.BackgroundImage")));
+               this.bRes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bRes.FlatAppearance.BorderSize = 0;
+               this.bRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bRes.Location = new System.Drawing.Point(76, 10);
+               this.bRes.Name = "bRes";
+               this.bRes.Size = new System.Drawing.Size(51, 40);
+               this.bRes.TabIndex = 3;
+               this.bRes.TabStop = false;
+               this.bRes.UseVisualStyleBackColor = true;
+               this.bRes.Click += new System.EventHandler(this.bRes_Click);
+               // 
+               // bHome
+               // 
+               this.bHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bHome.BackgroundImage")));
+               this.bHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bHome.FlatAppearance.BorderSize = 0;
+               this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.bHome.Location = new System.Drawing.Point(11, 7);
+               this.bHome.Name = "bHome";
+               this.bHome.Size = new System.Drawing.Size(52, 47);
+               this.bHome.TabIndex = 2;
+               this.bHome.TabStop = false;
+               this.bHome.UseVisualStyleBackColor = true;
+               this.bHome.Click += new System.EventHandler(this.bHome_Click);
                // 
                // label1
                // 
@@ -132,42 +214,6 @@
                this.label2.Size = new System.Drawing.Size(269, 31);
                this.label2.TabIndex = 21;
                this.label2.Text = "Hãy đánh thức con cú";
-               // 
-               // pTrue
-               // 
-               this.pTrue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.pTrue.Controls.Add(this.pStastic);
-               this.pTrue.Controls.Add(this.button8);
-               this.pTrue.Controls.Add(this.bStastic);
-               this.pTrue.Controls.Add(this.bNext);
-               this.pTrue.Controls.Add(this.label3);
-               this.pTrue.Controls.Add(this.pictureBox3);
-               this.pTrue.Location = new System.Drawing.Point(12, 87);
-               this.pTrue.Name = "pTrue";
-               this.pTrue.Size = new System.Drawing.Size(51, 55);
-               this.pTrue.TabIndex = 35;
-               this.pTrue.Visible = false;
-               // 
-               // button8
-               // 
-               this.button8.Location = new System.Drawing.Point(305, 443);
-               this.button8.Name = "button8";
-               this.button8.Size = new System.Drawing.Size(123, 23);
-               this.button8.TabIndex = 4;
-               this.button8.Text = "Xem quang cao";
-               this.button8.UseVisualStyleBackColor = true;
-               // 
-               // label3
-               // 
-               this.label3.AutoSize = true;
-               this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-               this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.label3.ForeColor = System.Drawing.Color.Red;
-               this.label3.Location = new System.Drawing.Point(175, 124);
-               this.label3.Name = "label3";
-               this.label3.Size = new System.Drawing.Size(199, 26);
-               this.label3.TabIndex = 1;
-               this.label3.Text = "Congratulations!!!";
                // 
                // MenuQues
                // 
@@ -327,11 +373,57 @@
                this.textBox11.TabIndex = 0;
                this.textBox11.Text = "\r\nCâu 1";
                // 
+               // pbSun
+               // 
+               this.pbSun.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSun.BackgroundImage")));
+               this.pbSun.Location = new System.Drawing.Point(51, 189);
+               this.pbSun.Name = "pbSun";
+               this.pbSun.Size = new System.Drawing.Size(100, 99);
+               this.pbSun.TabIndex = 34;
+               this.pbSun.TabStop = false;
+               this.pbSun.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbSun_MouseDown);
+               this.pbSun.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbSun_MouseMove);
+               // 
+               // pictureBox1
+               // 
+               this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+               this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pictureBox1.Location = new System.Drawing.Point(51, 189);
+               this.pictureBox1.Name = "pictureBox1";
+               this.pictureBox1.Size = new System.Drawing.Size(459, 319);
+               this.pictureBox1.TabIndex = 33;
+               this.pictureBox1.TabStop = false;
+               // 
+               // pTrue
+               // 
+               this.pTrue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.pTrue.Controls.Add(this.pictureBox3);
+               this.pTrue.Controls.Add(this.pStastic);
+               this.pTrue.Controls.Add(this.btnAddHeart);
+               this.pTrue.Controls.Add(this.bStastic);
+               this.pTrue.Controls.Add(this.bNext);
+               this.pTrue.Controls.Add(this.label3);
+               this.pTrue.Controls.Add(this.pictureBox4);
+               this.pTrue.Location = new System.Drawing.Point(12, 68);
+               this.pTrue.Name = "pTrue";
+               this.pTrue.Size = new System.Drawing.Size(42, 75);
+               this.pTrue.TabIndex = 37;
+               this.pTrue.Visible = false;
+               // 
+               // pictureBox3
+               // 
+               this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+               this.pictureBox3.Location = new System.Drawing.Point(7, 376);
+               this.pictureBox3.Name = "pictureBox3";
+               this.pictureBox3.Size = new System.Drawing.Size(575, 167);
+               this.pictureBox3.TabIndex = 6;
+               this.pictureBox3.TabStop = false;
+               // 
                // pStastic
                // 
                this.pStastic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pStastic.BackgroundImage")));
                this.pStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pStastic.Controls.Add(this.button6);
+               this.pStastic.Controls.Add(this.button5);
                this.pStastic.Controls.Add(this.top1);
                this.pStastic.Controls.Add(this.top3);
                this.pStastic.Controls.Add(this.label5);
@@ -341,21 +433,20 @@
                this.pStastic.Size = new System.Drawing.Size(64, 56);
                this.pStastic.TabIndex = 5;
                this.pStastic.Visible = false;
-               this.pStastic.Click += new System.EventHandler(this.button6_Click);
                // 
-               // button6
+               // button5
                // 
-               this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-               this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.button6.FlatAppearance.BorderSize = 0;
-               this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.button6.Location = new System.Drawing.Point(3, 3);
-               this.button6.Name = "button6";
-               this.button6.Size = new System.Drawing.Size(40, 41);
-               this.button6.TabIndex = 4;
-               this.button6.TabStop = false;
-               this.button6.UseVisualStyleBackColor = true;
-               this.button6.Click += new System.EventHandler(this.button6_Click);
+               this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+               this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.button5.FlatAppearance.BorderSize = 0;
+               this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.button5.Location = new System.Drawing.Point(3, 3);
+               this.button5.Name = "button5";
+               this.button5.Size = new System.Drawing.Size(40, 41);
+               this.button5.TabIndex = 4;
+               this.button5.TabStop = false;
+               this.button5.UseVisualStyleBackColor = true;
+               this.button5.Click += new System.EventHandler(this.button6_Click);
                // 
                // top1
                // 
@@ -393,13 +484,27 @@
                this.top2.TabIndex = 0;
                this.top2.Text = "label4";
                // 
+               // btnAddHeart
+               // 
+               this.btnAddHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddHeart.BackgroundImage")));
+               this.btnAddHeart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.btnAddHeart.FlatAppearance.BorderSize = 0;
+               this.btnAddHeart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+               this.btnAddHeart.Location = new System.Drawing.Point(401, 298);
+               this.btnAddHeart.Name = "btnAddHeart";
+               this.btnAddHeart.Size = new System.Drawing.Size(70, 61);
+               this.btnAddHeart.TabIndex = 4;
+               this.btnAddHeart.TabStop = false;
+               this.btnAddHeart.UseVisualStyleBackColor = true;
+               this.btnAddHeart.Click += new System.EventHandler(this.btnAddHeart_Click);
+               // 
                // bStastic
                // 
                this.bStastic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bStastic.BackgroundImage")));
                this.bStastic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
                this.bStastic.FlatAppearance.BorderSize = 0;
                this.bStastic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bStastic.Location = new System.Drawing.Point(221, 254);
+               this.bStastic.Location = new System.Drawing.Point(235, 254);
                this.bStastic.Name = "bStastic";
                this.bStastic.Size = new System.Drawing.Size(139, 116);
                this.bStastic.TabIndex = 3;
@@ -409,136 +514,48 @@
                // 
                // bNext
                // 
+               this.bNext.BackColor = System.Drawing.SystemColors.Control;
                this.bNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNext.BackgroundImage")));
-               this.bNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.bNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
                this.bNext.FlatAppearance.BorderSize = 0;
                this.bNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bNext.Location = new System.Drawing.Point(76, 254);
+               this.bNext.Location = new System.Drawing.Point(66, 298);
                this.bNext.Name = "bNext";
-               this.bNext.Size = new System.Drawing.Size(139, 116);
+               this.bNext.Size = new System.Drawing.Size(139, 72);
                this.bNext.TabIndex = 2;
                this.bNext.TabStop = false;
-               this.bNext.UseVisualStyleBackColor = true;
+               this.bNext.UseVisualStyleBackColor = false;
                this.bNext.Click += new System.EventHandler(this.bNext_Click);
                // 
-               // pictureBox3
+               // label3
                // 
-               this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-               this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-               this.pictureBox3.Location = new System.Drawing.Point(76, 3);
-               this.pictureBox3.Name = "pictureBox3";
-               this.pictureBox3.Size = new System.Drawing.Size(409, 245);
-               this.pictureBox3.TabIndex = 0;
-               this.pictureBox3.TabStop = false;
+               this.label3.AutoSize = true;
+               this.label3.BackColor = System.Drawing.Color.Khaki;
+               this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.label3.ForeColor = System.Drawing.Color.Red;
+               this.label3.Location = new System.Drawing.Point(149, 134);
+               this.label3.Name = "label3";
+               this.label3.Size = new System.Drawing.Size(89, 26);
+               this.label3.TabIndex = 1;
+               this.label3.Text = "Congra";
                // 
-               // pbSun
+               // pictureBox4
                // 
-               this.pbSun.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSun.BackgroundImage")));
-               this.pbSun.Location = new System.Drawing.Point(51, 189);
-               this.pbSun.Name = "pbSun";
-               this.pbSun.Size = new System.Drawing.Size(100, 99);
-               this.pbSun.TabIndex = 34;
-               this.pbSun.TabStop = false;
-               this.pbSun.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbSun_MouseDown);
-               this.pbSun.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pbSun_MouseMove);
-               // 
-               // pictureBox1
-               // 
-               this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-               this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pictureBox1.Location = new System.Drawing.Point(51, 189);
-               this.pictureBox1.Name = "pictureBox1";
-               this.pictureBox1.Size = new System.Drawing.Size(459, 319);
-               this.pictureBox1.TabIndex = 33;
-               this.pictureBox1.TabStop = false;
-               // 
-               // bShowQues
-               // 
-               this.bShowQues.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bShowQues.BackgroundImage")));
-               this.bShowQues.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bShowQues.FlatAppearance.BorderSize = 0;
-               this.bShowQues.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bShowQues.Location = new System.Drawing.Point(281, 8);
-               this.bShowQues.Name = "bShowQues";
-               this.bShowQues.Size = new System.Drawing.Size(48, 44);
-               this.bShowQues.TabIndex = 8;
-               this.bShowQues.UseVisualStyleBackColor = true;
-               this.bShowQues.Click += new System.EventHandler(this.bShowQues_Click);
-               // 
-               // pictureBox2
-               // 
-               this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-               this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pictureBox2.ErrorImage = null;
-               this.pictureBox2.Location = new System.Drawing.Point(513, 1);
-               this.pictureBox2.Name = "pictureBox2";
-               this.pictureBox2.Size = new System.Drawing.Size(69, 56);
-               this.pictureBox2.TabIndex = 6;
-               this.pictureBox2.TabStop = false;
-               // 
-               // bInstruct
-               // 
-               this.bInstruct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bInstruct.BackgroundImage")));
-               this.bInstruct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bInstruct.FlatAppearance.BorderSize = 0;
-               this.bInstruct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bInstruct.Location = new System.Drawing.Point(211, 10);
-               this.bInstruct.Name = "bInstruct";
-               this.bInstruct.Size = new System.Drawing.Size(48, 44);
-               this.bInstruct.TabIndex = 5;
-               this.bInstruct.TabStop = false;
-               this.bInstruct.UseVisualStyleBackColor = true;
-               this.bInstruct.Click += new System.EventHandler(this.bInstruct_Click);
-               // 
-               // bNextControl
-               // 
-               this.bNextControl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNextControl.BackgroundImage")));
-               this.bNextControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bNextControl.FlatAppearance.BorderSize = 0;
-               this.bNextControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bNextControl.Location = new System.Drawing.Point(144, 9);
-               this.bNextControl.Name = "bNextControl";
-               this.bNextControl.Size = new System.Drawing.Size(51, 40);
-               this.bNextControl.TabIndex = 4;
-               this.bNextControl.TabStop = false;
-               this.bNextControl.UseVisualStyleBackColor = true;
-               this.bNextControl.Click += new System.EventHandler(this.bNextControl_Click);
-               // 
-               // bRes
-               // 
-               this.bRes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bRes.BackgroundImage")));
-               this.bRes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bRes.FlatAppearance.BorderSize = 0;
-               this.bRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bRes.Location = new System.Drawing.Point(76, 10);
-               this.bRes.Name = "bRes";
-               this.bRes.Size = new System.Drawing.Size(51, 40);
-               this.bRes.TabIndex = 3;
-               this.bRes.TabStop = false;
-               this.bRes.UseVisualStyleBackColor = true;
-               this.bRes.Click += new System.EventHandler(this.bRes_Click);
-               // 
-               // bHome
-               // 
-               this.bHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bHome.BackgroundImage")));
-               this.bHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.bHome.FlatAppearance.BorderSize = 0;
-               this.bHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-               this.bHome.Location = new System.Drawing.Point(11, 7);
-               this.bHome.Name = "bHome";
-               this.bHome.Size = new System.Drawing.Size(52, 47);
-               this.bHome.TabIndex = 2;
-               this.bHome.TabStop = false;
-               this.bHome.UseVisualStyleBackColor = true;
-               this.bHome.Click += new System.EventHandler(this.bHome_Click);
+               this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+               this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+               this.pictureBox4.Location = new System.Drawing.Point(66, 3);
+               this.pictureBox4.Name = "pictureBox4";
+               this.pictureBox4.Size = new System.Drawing.Size(449, 269);
+               this.pictureBox4.TabIndex = 0;
+               this.pictureBox4.TabStop = false;
                // 
                // Play4
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(584, 611);
-               this.Controls.Add(this.MenuQues);
                this.Controls.Add(this.pTrue);
+               this.Controls.Add(this.MenuQues);
                this.Controls.Add(this.pbSun);
                this.Controls.Add(this.pictureBox1);
                this.Controls.Add(this.label2);
@@ -549,16 +566,17 @@
                this.Text = "Play4";
                this.panel1.ResumeLayout(false);
                this.panel1.PerformLayout();
-               this.pTrue.ResumeLayout(false);
-               this.pTrue.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
                this.MenuQues.ResumeLayout(false);
                this.MenuQues.PerformLayout();
-               this.pStastic.ResumeLayout(false);
-               this.pStastic.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pbSun)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-               ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+               this.pTrue.ResumeLayout(false);
+               this.pTrue.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+               this.pStastic.ResumeLayout(false);
+               this.pStastic.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -579,18 +597,6 @@
           private System.Windows.Forms.Label label2;
           private System.Windows.Forms.PictureBox pictureBox1;
           private System.Windows.Forms.PictureBox pbSun;
-          private System.Windows.Forms.Panel pTrue;
-          private System.Windows.Forms.Panel pStastic;
-          private System.Windows.Forms.Button button6;
-          private System.Windows.Forms.Label top1;
-          private System.Windows.Forms.Label top3;
-          private System.Windows.Forms.Label label5;
-          private System.Windows.Forms.Label top2;
-          private System.Windows.Forms.Button button8;
-          private System.Windows.Forms.Button bStastic;
-          private System.Windows.Forms.Button bNext;
-          private System.Windows.Forms.Label label3;
-          private System.Windows.Forms.PictureBox pictureBox3;
           private System.Windows.Forms.TableLayoutPanel MenuQues;
           private System.Windows.Forms.TextBox textBox10;
           private System.Windows.Forms.TextBox textBox9;
@@ -602,5 +608,18 @@
           private System.Windows.Forms.TextBox textBox3;
           private System.Windows.Forms.TextBox textBox2;
           private System.Windows.Forms.TextBox textBox11;
+          private System.Windows.Forms.Panel pTrue;
+          private System.Windows.Forms.PictureBox pictureBox3;
+          private System.Windows.Forms.Panel pStastic;
+          private System.Windows.Forms.Button button5;
+          private System.Windows.Forms.Label top1;
+          private System.Windows.Forms.Label top3;
+          private System.Windows.Forms.Label label5;
+          private System.Windows.Forms.Label top2;
+          private System.Windows.Forms.Button btnAddHeart;
+          private System.Windows.Forms.Button bStastic;
+          private System.Windows.Forms.Button bNext;
+          private System.Windows.Forms.Label label3;
+          private System.Windows.Forms.PictureBox pictureBox4;
      }
 }
