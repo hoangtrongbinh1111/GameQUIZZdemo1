@@ -8,19 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Media;
 namespace GameQUIZZdemo1
 {
      public partial class EndGame : Form
      {
           string name = "";
-          public EndGame(string name1="")
+          public bool soundMode;
+          public EndGame(string name1 = "", bool sound = true)
           {
                InitializeComponent();
                name = name1;
+               soundMode = sound;
           }
 
           private void button1_Click(object sender, EventArgs e)
           {
+               if (soundMode == true)
+               {
+                    SoundPlayer sp = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.CLick);
+                    sp.Play();
+               }
                SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-6DIRH3U\SQLEXPRESS01;Initial Catalog=GameQuizz;Integrated Security=True");
                string sql = "select * from UserInfo";//THỰC HIỆN lệnh truy vấn đén sql 
                SqlCommand cmd = new SqlCommand(sql, connect);
@@ -38,6 +46,13 @@ namespace GameQUIZZdemo1
                this.Close();
           }
 
-          
+          private void EndGame_Load(object sender, EventArgs e)
+          {
+               if (soundMode == true)
+               {
+                    SoundPlayer sp = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.happyyyy);
+                    sp.Play();
+               }
+          }
      }
 }

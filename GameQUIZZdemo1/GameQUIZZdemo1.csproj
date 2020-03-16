@@ -213,5 +213,53 @@
   <ItemGroup>
     <None Include="Resources\15-Tick-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrong-answer-sound-effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true Answer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true ans 2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\true ans 3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong 2.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong 2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong 3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong 4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrong 5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\congra.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happyyyy.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V %28mp3cut.net%29 %281%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

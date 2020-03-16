@@ -118,13 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="background music" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\V (mp3cut.net) (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="CLick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Am-thanh-click-chuot-www_nhacchuongvui_com.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="click1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="click2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="click3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="click4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="congra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\congra.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="happyyyy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\happyyyy.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="true" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15-Tick-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="true_Answer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\true Answer.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="true_ans_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\true ans 2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="true_ans_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\true ans 3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\14-Delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wrong Answer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wrong-answer-sound-effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wrong_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrong 2.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wrong_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrong 2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wrong_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrong 3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wrong_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrong 4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wrong_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrong 5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

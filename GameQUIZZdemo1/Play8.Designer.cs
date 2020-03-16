@@ -31,7 +31,6 @@
                this.components = new System.ComponentModel.Container();
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play8));
                this.panel1 = new System.Windows.Forms.Panel();
-               this.lbPoint = new System.Windows.Forms.Label();
                this.bShowQues = new System.Windows.Forms.Button();
                this.labelSurvive = new System.Windows.Forms.Label();
                this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -70,6 +69,8 @@
                this.bNext = new System.Windows.Forms.Button();
                this.label3 = new System.Windows.Forms.Label();
                this.pictureBox7 = new System.Windows.Forms.PictureBox();
+               this.lbPoint = new System.Windows.Forms.Label();
+               this.pictureBox8 = new System.Windows.Forms.PictureBox();
                this.panel1.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,11 +82,13 @@
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
                this.pStastic.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
                this.SuspendLayout();
                // 
                // panel1
                // 
                this.panel1.Controls.Add(this.lbPoint);
+               this.panel1.Controls.Add(this.pictureBox8);
                this.panel1.Controls.Add(this.bShowQues);
                this.panel1.Controls.Add(this.labelSurvive);
                this.panel1.Controls.Add(this.pictureBox2);
@@ -97,16 +100,6 @@
                this.panel1.Name = "panel1";
                this.panel1.Size = new System.Drawing.Size(582, 60);
                this.panel1.TabIndex = 7;
-               // 
-               // lbPoint
-               // 
-               this.lbPoint.AutoSize = true;
-               this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.lbPoint.Location = new System.Drawing.Point(395, 10);
-               this.lbPoint.Name = "lbPoint";
-               this.lbPoint.Size = new System.Drawing.Size(49, 33);
-               this.lbPoint.TabIndex = 11;
-               this.lbPoint.Text = "10";
                // 
                // bShowQues
                // 
@@ -580,6 +573,27 @@
                this.pictureBox7.TabIndex = 0;
                this.pictureBox7.TabStop = false;
                // 
+               // lbPoint
+               // 
+               this.lbPoint.AutoSize = true;
+               this.lbPoint.BackColor = System.Drawing.Color.Gold;
+               this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.lbPoint.Location = new System.Drawing.Point(459, 22);
+               this.lbPoint.Name = "lbPoint";
+               this.lbPoint.Size = new System.Drawing.Size(26, 17);
+               this.lbPoint.TabIndex = 19;
+               this.lbPoint.Text = "10";
+               // 
+               // pictureBox8
+               // 
+               this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+               this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pictureBox8.Location = new System.Drawing.Point(438, 1);
+               this.pictureBox8.Name = "pictureBox8";
+               this.pictureBox8.Size = new System.Drawing.Size(69, 57);
+               this.pictureBox8.TabIndex = 20;
+               this.pictureBox8.TabStop = false;
+               // 
                // Play8
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,6 +626,7 @@
                this.pStastic.ResumeLayout(false);
                this.pStastic.PerformLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -620,7 +635,6 @@
           #endregion
 
           private System.Windows.Forms.Panel panel1;
-          private System.Windows.Forms.Label lbPoint;
           private System.Windows.Forms.Button bShowQues;
           private System.Windows.Forms.Label labelSurvive;
           private System.Windows.Forms.PictureBox pictureBox2;
@@ -659,5 +673,7 @@
           private System.Windows.Forms.Button bNext;
           private System.Windows.Forms.Label label3;
           private System.Windows.Forms.PictureBox pictureBox7;
+          private System.Windows.Forms.Label lbPoint;
+          private System.Windows.Forms.PictureBox pictureBox8;
      }
 }

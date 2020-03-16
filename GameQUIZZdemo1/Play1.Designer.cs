@@ -33,6 +33,7 @@
                this.panel1 = new System.Windows.Forms.Panel();
                this.lbPoint = new System.Windows.Forms.Label();
                this.button7 = new System.Windows.Forms.Button();
+               this.pictureBox4 = new System.Windows.Forms.PictureBox();
                this.labelSurvive = new System.Windows.Forms.Label();
                this.pictureBox2 = new System.Windows.Forms.PictureBox();
                this.button1 = new System.Windows.Forms.Button();
@@ -50,12 +51,12 @@
                this.top3 = new System.Windows.Forms.Label();
                this.label5 = new System.Windows.Forms.Label();
                this.top2 = new System.Windows.Forms.Label();
-               this.pTrue1 = new System.Windows.Forms.PictureBox();
                this.btnAddHeart = new System.Windows.Forms.Button();
                this.bStastic = new System.Windows.Forms.Button();
                this.bNext = new System.Windows.Forms.Button();
                this.label3 = new System.Windows.Forms.Label();
                this.pictureBox1 = new System.Windows.Forms.PictureBox();
+               this.pTrue1 = new System.Windows.Forms.PictureBox();
                this.MenuQues = new System.Windows.Forms.TableLayoutPanel();
                this.textBox10 = new System.Windows.Forms.TextBox();
                this.textBox9 = new System.Windows.Forms.TextBox();
@@ -73,12 +74,13 @@
                this.p2 = new System.Windows.Forms.PictureBox();
                this.p1 = new System.Windows.Forms.PictureBox();
                this.panel1.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                this.pTrue.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
                this.pStastic.SuspendLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pTrue1)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+               ((System.ComponentModel.ISupportInitialize)(this.pTrue1)).BeginInit();
                this.MenuQues.SuspendLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pWrong)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
@@ -91,6 +93,7 @@
                // 
                this.panel1.Controls.Add(this.lbPoint);
                this.panel1.Controls.Add(this.button7);
+               this.panel1.Controls.Add(this.pictureBox4);
                this.panel1.Controls.Add(this.labelSurvive);
                this.panel1.Controls.Add(this.pictureBox2);
                this.panel1.Controls.Add(this.button1);
@@ -105,10 +108,11 @@
                // lbPoint
                // 
                this.lbPoint.AutoSize = true;
-               this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.lbPoint.Location = new System.Drawing.Point(395, 10);
+               this.lbPoint.BackColor = System.Drawing.Color.Gold;
+               this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.lbPoint.Location = new System.Drawing.Point(459, 22);
                this.lbPoint.Name = "lbPoint";
-               this.lbPoint.Size = new System.Drawing.Size(49, 33);
+               this.lbPoint.Size = new System.Drawing.Size(26, 17);
                this.lbPoint.TabIndex = 9;
                this.lbPoint.Text = "10";
                // 
@@ -125,13 +129,23 @@
                this.button7.UseVisualStyleBackColor = true;
                this.button7.Click += new System.EventHandler(this.button7_Click);
                // 
+               // pictureBox4
+               // 
+               this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+               this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pictureBox4.Location = new System.Drawing.Point(438, 1);
+               this.pictureBox4.Name = "pictureBox4";
+               this.pictureBox4.Size = new System.Drawing.Size(69, 57);
+               this.pictureBox4.TabIndex = 18;
+               this.pictureBox4.TabStop = false;
+               // 
                // labelSurvive
                // 
                this.labelSurvive.AutoSize = true;
                this.labelSurvive.BackColor = System.Drawing.Color.Red;
                this.labelSurvive.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                this.labelSurvive.ForeColor = System.Drawing.Color.Yellow;
-               this.labelSurvive.Location = new System.Drawing.Point(536, 18);
+               this.labelSurvive.Location = new System.Drawing.Point(537, 20);
                this.labelSurvive.Name = "labelSurvive";
                this.labelSurvive.Size = new System.Drawing.Size(19, 21);
                this.labelSurvive.TabIndex = 7;
@@ -320,17 +334,6 @@
                this.top2.TabIndex = 0;
                this.top2.Text = "label4";
                // 
-               // pTrue1
-               // 
-               this.pTrue1.BackgroundImage = global::GameQUIZZdemo1.Properties.Resources._true;
-               this.pTrue1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-               this.pTrue1.Location = new System.Drawing.Point(490, 155);
-               this.pTrue1.Name = "pTrue1";
-               this.pTrue1.Size = new System.Drawing.Size(57, 50);
-               this.pTrue1.TabIndex = 16;
-               this.pTrue1.TabStop = false;
-               this.pTrue1.Visible = false;
-               // 
                // btnAddHeart
                // 
                this.btnAddHeart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddHeart.BackgroundImage")));
@@ -395,6 +398,17 @@
                this.pictureBox1.Size = new System.Drawing.Size(449, 269);
                this.pictureBox1.TabIndex = 0;
                this.pictureBox1.TabStop = false;
+               // 
+               // pTrue1
+               // 
+               this.pTrue1.BackgroundImage = global::GameQUIZZdemo1.Properties.Resources._true;
+               this.pTrue1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pTrue1.Location = new System.Drawing.Point(490, 155);
+               this.pTrue1.Name = "pTrue1";
+               this.pTrue1.Size = new System.Drawing.Size(57, 50);
+               this.pTrue1.TabIndex = 16;
+               this.pTrue1.TabStop = false;
+               this.pTrue1.Visible = false;
                // 
                // MenuQues
                // 
@@ -631,19 +645,20 @@
                this.Cursor = System.Windows.Forms.Cursors.Default;
                this.Name = "Play1";
                this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-               this.Text = "Play1";
+               this.Text = "Màn 1- Player:";
                this.Load += new System.EventHandler(this.Play1_Load);
                this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Play1_MouseClick);
                this.panel1.ResumeLayout(false);
                this.panel1.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
                this.pTrue.ResumeLayout(false);
                this.pTrue.PerformLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
                this.pStastic.ResumeLayout(false);
                this.pStastic.PerformLayout();
-               ((System.ComponentModel.ISupportInitialize)(this.pTrue1)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+               ((System.ComponentModel.ISupportInitialize)(this.pTrue1)).EndInit();
                this.MenuQues.ResumeLayout(false);
                this.MenuQues.PerformLayout();
                ((System.ComponentModel.ISupportInitialize)(this.pWrong)).EndInit();
@@ -703,5 +718,6 @@
           private System.Windows.Forms.TextBox textBox1;
           private System.Windows.Forms.Label lbPoint;
           private System.Windows.Forms.PictureBox pictureBox3;
+          private System.Windows.Forms.PictureBox pictureBox4;
      }
 }

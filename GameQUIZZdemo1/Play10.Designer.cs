@@ -31,6 +31,7 @@
                System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play10));
                this.panel1 = new System.Windows.Forms.Panel();
                this.lbPoint = new System.Windows.Forms.Label();
+               this.pictureBox4 = new System.Windows.Forms.PictureBox();
                this.bShowQues = new System.Windows.Forms.Button();
                this.labelSurvive = new System.Windows.Forms.Label();
                this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,7 @@
                this.label3 = new System.Windows.Forms.Label();
                this.pictureBox1 = new System.Windows.Forms.PictureBox();
                this.panel1.SuspendLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
                this.MenuQues.SuspendLayout();
                this.pTrue.SuspendLayout();
@@ -82,6 +84,7 @@
                // panel1
                // 
                this.panel1.Controls.Add(this.lbPoint);
+               this.panel1.Controls.Add(this.pictureBox4);
                this.panel1.Controls.Add(this.bShowQues);
                this.panel1.Controls.Add(this.labelSurvive);
                this.panel1.Controls.Add(this.pictureBox2);
@@ -97,12 +100,23 @@
                // lbPoint
                // 
                this.lbPoint.AutoSize = true;
-               this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.lbPoint.Location = new System.Drawing.Point(395, 10);
+               this.lbPoint.BackColor = System.Drawing.Color.Gold;
+               this.lbPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.lbPoint.Location = new System.Drawing.Point(459, 22);
                this.lbPoint.Name = "lbPoint";
-               this.lbPoint.Size = new System.Drawing.Size(49, 33);
-               this.lbPoint.TabIndex = 11;
+               this.lbPoint.Size = new System.Drawing.Size(26, 17);
+               this.lbPoint.TabIndex = 19;
                this.lbPoint.Text = "10";
+               // 
+               // pictureBox4
+               // 
+               this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+               this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+               this.pictureBox4.Location = new System.Drawing.Point(438, 1);
+               this.pictureBox4.Name = "pictureBox4";
+               this.pictureBox4.Size = new System.Drawing.Size(69, 57);
+               this.pictureBox4.TabIndex = 20;
+               this.pictureBox4.TabStop = false;
                // 
                // bShowQues
                // 
@@ -472,7 +486,7 @@
                this.pTrue.Controls.Add(this.pictureBox1);
                this.pTrue.Location = new System.Drawing.Point(12, 80);
                this.pTrue.Name = "pTrue";
-               this.pTrue.Size = new System.Drawing.Size(71, 60);
+               this.pTrue.Size = new System.Drawing.Size(53, 62);
                this.pTrue.TabIndex = 61;
                this.pTrue.Visible = false;
                // 
@@ -512,6 +526,7 @@
                this.button5.TabIndex = 4;
                this.button5.TabStop = false;
                this.button5.UseVisualStyleBackColor = true;
+               this.button5.Click += new System.EventHandler(this.button6_Click);
                // 
                // top1
                // 
@@ -561,6 +576,7 @@
                this.btnAddHeart.TabIndex = 4;
                this.btnAddHeart.TabStop = false;
                this.btnAddHeart.UseVisualStyleBackColor = true;
+               this.btnAddHeart.Click += new System.EventHandler(this.btnAddHeart_Click);
                // 
                // bStastic
                // 
@@ -574,6 +590,7 @@
                this.bStastic.TabIndex = 3;
                this.bStastic.TabStop = false;
                this.bStastic.UseVisualStyleBackColor = true;
+               this.bStastic.Click += new System.EventHandler(this.bStastic_Click);
                // 
                // bNext
                // 
@@ -588,6 +605,7 @@
                this.bNext.TabIndex = 2;
                this.bNext.TabStop = false;
                this.bNext.UseVisualStyleBackColor = false;
+               this.bNext.Click += new System.EventHandler(this.bNext_Click);
                // 
                // label3
                // 
@@ -632,6 +650,7 @@
                this.Text = "Play10";
                this.panel1.ResumeLayout(false);
                this.panel1.PerformLayout();
+               ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
                ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
                this.MenuQues.ResumeLayout(false);
                this.MenuQues.PerformLayout();
@@ -649,7 +668,6 @@
           #endregion
 
           private System.Windows.Forms.Panel panel1;
-          private System.Windows.Forms.Label lbPoint;
           private System.Windows.Forms.Button bShowQues;
           private System.Windows.Forms.Label labelSurvive;
           private System.Windows.Forms.PictureBox pictureBox2;
@@ -689,5 +707,7 @@
           private System.Windows.Forms.Button bNext;
           private System.Windows.Forms.Label label3;
           private System.Windows.Forms.PictureBox pictureBox1;
+          private System.Windows.Forms.Label lbPoint;
+          private System.Windows.Forms.PictureBox pictureBox4;
      }
 }

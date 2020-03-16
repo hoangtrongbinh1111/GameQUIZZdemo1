@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Media;
 namespace GameQUIZZdemo1
 {
      public partial class AddHeart : Form
@@ -15,12 +16,14 @@ namespace GameQUIZZdemo1
           public int surNum;
           public string name = "";
           public int point = 0;
-          public AddHeart(int surNum1 = 10, string nameClient = "", int pointClient = 0)
+          public bool soundMode;
+          public AddHeart(int surNum1 = 10, string nameClient = "", int pointClient = 0,bool sound=true)
           {
                InitializeComponent();
                surNum = surNum1;               
                name = nameClient;//lấy tên người chơi
                point = pointClient;
+               soundMode = sound;
           }
           SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-6DIRH3U\SQLEXPRESS01;Initial Catalog=GameQuizz;Integrated Security=True");
           public void updateDB()//cập nhật vào database
@@ -44,6 +47,11 @@ namespace GameQUIZZdemo1
 
           private void button1_Click(object sender, EventArgs e)
           {
+               if(soundMode==true)
+               {
+                    SoundPlayer sp = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.CLick);
+                    sp.Play();
+               }
                timer1.Start();
                if(prMang.Value==100)
                {
@@ -51,6 +59,11 @@ namespace GameQUIZZdemo1
                     DialogResult dlr= MessageBox.Show("Bạn đã được thêm 3 mạng!", "Thông báo",MessageBoxButtons.OK);
                     if(dlr==DialogResult.OK)
                     {
+                         if (soundMode == true)
+                         {
+                              SoundPlayer sp = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.true_ans_3);
+                              sp.Play();
+                         }
                          surNum += 3;//thêm 3 mạng                         
                          updateDB();//update cơ sở dữ liệu                  
                          this.Close();

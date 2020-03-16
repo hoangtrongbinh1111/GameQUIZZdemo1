@@ -9,18 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Data.SqlClient;
-
+using System.Media;
 namespace GameQUIZZdemo1
 {
      public partial class Play1 : Form
      {
           private int count = 0;
-          public int surNum ;
-          public string name = "";
-          public int point = 0;
+          public int surNum ;//số mạng
+          public string name = "";//tên client
+          public int point = 0;//điểm
+          public bool SoundMode;//mode bật tắt âm thanh
           public int SurNum { get => surNum; set => surNum = value; }
 
-          public Play1(int surNum1=10,string nameClient="",int pointClient=0)
+          public Play1(int surNum1=10,string nameClient="",int pointClient=0,bool sound=true)
           {
                InitializeComponent();         
                surNum = surNum1;
@@ -28,6 +29,8 @@ namespace GameQUIZZdemo1
                name = nameClient;//lấy tên người chơi
                point = pointClient;
                lbPoint.Text = point.ToString();//ghi điểm
+               Text = "Màn 1 - Player: " + name;//ghi tên vòng với tên người chơi
+               SoundMode = sound;
           }
           SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-6DIRH3U\SQLEXPRESS01;Initial Catalog=GameQuizz;Integrated Security=True");
           public void updateDB()//cập nhật vào database
@@ -63,7 +66,8 @@ namespace GameQUIZZdemo1
 
           private void bNext_Click(object sender, EventArgs e)
           {
-               if(surNum==0)
+               Sound(3);
+               if (surNum==0)
                {
                     MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
                     AddHeart ah = new AddHeart(surNum, name, point);
@@ -77,23 +81,23 @@ namespace GameQUIZZdemo1
                     updateDB();
                     //insert dữ liệu
                     this.Hide();
-                    Play2 play = new Play2(surNum, name, point);
+                    Play2 play = new Play2(surNum, name, point,SoundMode);
                     play.ShowDialog();
                     this.Close();
                }              
           }
           
           private void button3_Click(object sender, EventArgs e)//nút restart
-          {          
+          {
+               Sound(3);
                DialogResult dlr= MessageBox.Show("Do you want to restart?", "Restart",MessageBoxButtons.YesNo);
                if(dlr==DialogResult.Yes)//đồng ý thì reset lại màn chơi
                {
                     this.Hide();
-                    Play1 play = new Play1(surNum,name,point);
+                    Play1 play = new Play1(surNum,name,point,SoundMode);
                     play.ShowDialog();
                     this.Close();
-               }
-               
+               }             
           }
 
           public void Congra()//các câu chúc mừng
@@ -137,21 +141,23 @@ namespace GameQUIZZdemo1
           }
           private void button2_Click(object sender, EventArgs e)//nút home 
           {
+               Sound(3);
                this.Hide();
                Form1 play = new Form1();
                play.ShowDialog();
-               this.Close();
+               this.Close();              
           }
  
           private void button4_Click(object sender, EventArgs e)//nút chuyển qua câu tiếp theo
-          {               
+          {
+               Sound(3);
                DialogResult dlr = MessageBox.Show("Bỏ qua thử thách sẽ tốn 2 mạng. Có hay không?", "Warning", MessageBoxButtons.YesNo);
                if (dlr == DialogResult.Yes)//đồng ý thì sẽ chuyển sang câu tiếp theo
                { 
                     if(surNum<=2)//nếu mạng mà nhỏ hơn or bằng 2 thì phải thêm mạng
                     {
                          MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
-                         AddHeart ah = new AddHeart(surNum, name, point);
+                         AddHeart ah = new AddHeart(surNum, name, point,SoundMode);
                          ah.ShowDialog();
                          surNum += 3;
                          labelSurvive.Text = surNum.ToString();
@@ -162,7 +168,7 @@ namespace GameQUIZZdemo1
                          point += 10;
                          updateDB();
                          this.Hide();
-                         Play2 play = new Play2(surNum, name, point);
+                         Play2 play = new Play2(surNum, name, point,SoundMode);
                          play.ShowDialog();
                          this.Close();
                     }                               
@@ -172,6 +178,7 @@ namespace GameQUIZZdemo1
           int countReturn = 0;//dùng để ấn lại câu hướng dẫn
           private void button1_Click_1(object sender, EventArgs e)//gợi ý
           {
+               Sound(3);
                countInstruct++;
                if (countInstruct == 1)
                {
@@ -179,7 +186,7 @@ namespace GameQUIZZdemo1
                     {
                          countReturn++;
                          MessageBox.Show("Bạn phải thêm mạng để tiếp tục chơi!", "Warning", MessageBoxButtons.OK);
-                         AddHeart ah = new AddHeart(surNum, name, point);
+                         AddHeart ah = new AddHeart(surNum, name, point,SoundMode);
                          ah.ShowDialog();
                          surNum += 3;
                          labelSurvive.Text = surNum.ToString();
@@ -208,6 +215,7 @@ namespace GameQUIZZdemo1
                pWrong.Visible = true;
                pWrong.Location = new Point(e.X-25, e.Y-30);//con trỏ ấn thì dấu X sẽ hiện lên ở vị trí trugn tâm
                timer1.Start();
+               Sound(1);
           }
 
           private void p1_Click(object sender, EventArgs e)//chọn sai
@@ -215,6 +223,7 @@ namespace GameQUIZZdemo1
                pWrong.Visible = true;
                pWrong.Location = new Point(50,287);
                timer1.Start();
+               Sound(1);//sai
           }
 
           private void p3_Click(object sender, EventArgs e)//chọn sai
@@ -222,6 +231,7 @@ namespace GameQUIZZdemo1
                pWrong.Visible = true;
                pWrong.Location = new Point(160,456);
                timer1.Start();
+               Sound(1);
           }
 
           private void p4_Click(object sender, EventArgs e)//chọn sai
@@ -229,17 +239,19 @@ namespace GameQUIZZdemo1
                pWrong.Visible = true;
                pWrong.Location = new Point(400,440);
                timer1.Start();
+               Sound(1);
           }
 
           private void p2_Click(object sender, EventArgs e)//chọn đúng
           {
                pTrue1.Visible = true;
                pTrue1.Location = new Point(407, 222);
-               timer1.Start();
+               timer1.Start();             
                pTrue.Visible = true;
                pTrue.Location = new Point(0, 60);
                pTrue.Size = new Size(582,544);
                Congra();
+               Sound(4);
           }
 
           private void Play1_Load(object sender, EventArgs e)
@@ -250,6 +262,7 @@ namespace GameQUIZZdemo1
          
           private void bStastic_Click(object sender, EventArgs e)
           {
+               Sound(3);
                List<int> point = new List<int>();
                pStastic.Location = new Point(76, 0);              
                pStastic.Visible = true;
@@ -261,15 +274,7 @@ namespace GameQUIZZdemo1
                SqlDataAdapter da = new SqlDataAdapter(cmd);//lưu dữ liệu lấy được vào đây
                DataTable dt = new DataTable();//tạo 1 kho dữ liệu ảo
                da.Fill(dt);// đổ dữ liệu vào kho               
-               connect.Close();
-               //int CompareTo(int x,int y)
-               //{
-               //     if (x > y)
-               //          return 1;
-               //     else if (x <y)
-               //          return -1;
-               //     return 0;
-               //}
+               connect.Close();               
                if (dt != null)
                {
                     foreach (DataRow dr in dt.Rows)
@@ -303,18 +308,18 @@ namespace GameQUIZZdemo1
                          top3.Text = dr["user_name"].ToString() + "(" + point[length - 3].ToString() + ")";
                          continue;
                     }
-               }
-               
-               
+               }           
           }
 
           private void button5_Click(object sender, EventArgs e)
           {
                pStastic.Visible = false;
+               Sound(3);
           }
 
           private void button7_Click(object sender, EventArgs e)//hệ thống câu hỏi
           {
+               Sound(3);
                MenuQues.Size = new Size(475,166);
                MenuQues.Location = new Point(74,68);
                textBox1.Size = new Size(89,77);
@@ -333,20 +338,48 @@ namespace GameQUIZZdemo1
           private void textBox1_Click(object sender, EventArgs e)//click vào câu 1 thì sẽ ẩn đi
           {
                MenuQues.Visible = false;
+               Sound(3);
           }
 
           private void btnAddHeart_Click(object sender, EventArgs e)//thêm mạng
           {
-               if(surNum==0)//nếu hết mạng thì mới cho sự trợ giúp
+               Sound(3);
+               if (surNum==0)//nếu hết mạng thì mới cho sự trợ giúp
                {
-                    AddHeart ah = new AddHeart(surNum, name, point);
+                    AddHeart ah = new AddHeart(surNum, name, point,SoundMode);
                     ah.ShowDialog();              
                }
                else
                {
                     MessageBox.Show("Hết mạng mới được thêm mạng", "Thông báo", MessageBoxButtons.OK);
+               }               
+          }
+
+          private void Sound(int mode)
+          {
+               if(SoundMode==true)
+               {
+                    if(mode==1)//âm thanh sai
+                    {
+                         SoundPlayer s = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.wrong_21);
+                         s.Play();
+                    }
+                    else if(mode==2)//âm thanh đúng
+                    {
+                         SoundPlayer s = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.true_Answer);
+                         s.Play();
+                    }
+                    else if(mode==3)//âm thanh click
+                    {
+                         SoundPlayer s = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.click1);
+                         s.Play();
+                    }
+                    else if(mode==4)//chúc mừng
+                    {
+                         SoundPlayer s = new SoundPlayer(GameQUIZZdemo1.Properties.Resources.congra);
+                         s.Play();
+                    }
                }
-               
           }
      }
 }

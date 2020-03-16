@@ -57,6 +57,7 @@
                this.Name = "EndGame";
                this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
                this.Text = "EndGame";
+               this.Load += new System.EventHandler(this.EndGame_Load);
                this.ResumeLayout(false);
 
           }
